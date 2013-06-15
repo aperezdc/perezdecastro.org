@@ -1,0 +1,14 @@
+title: Writings - Adrián Pérez de Castro
+hide_title: true
+
+{{# site }}
+<table id="postlist">
+	<tbody>
+	{{# posts }}
+		<tr>
+			<td class="date">{{ date }} &mdash;</td>
+			<td><a href="posts/{{ slug }}.html">{{ slug }}</a></td>
+		</tr>
+	{{/ posts }}
+</dl>
+{{/ site }}

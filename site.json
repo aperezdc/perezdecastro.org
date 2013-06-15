@@ -1,0 +1,16 @@
+{
+	"title": "Adrian Pérez de Castro",
+
+	"navigation": [
+		{ "text": "Blog",  "link": "index.html" },
+		{ "text": "About", "link": "about.html" }
+	],
+
+	"@content": {
+		"Page": ["*.markdown", "*.mustache"],
+		"Post": ["posts/**.markdown"]
+	},
+	"@layout": {
+		"@default": "layout/base.mustache"
+	}
+}
