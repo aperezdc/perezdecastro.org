@@ -64,6 +64,21 @@ body {
     font: 16px/26px Raleway, sans-serif;
 }
 
+code,
+pre {
+   font-family: "PT Mono", "Source Code Pro", monospace;
+   background: #f8f8f8;
+   border: 1px solid #ddd;
+   padding-left: 0.25em;
+   padding-right: 0.25em;
+   border-radius: 3px;
+}
+pre > code {
+   border: none;
+   padding-left: 0;
+   padding-right: 0;
+}
+
 .wrapper {
     width: 90%;
     margin: 0 5%;
