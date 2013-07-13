@@ -2,8 +2,8 @@
 	"title": "Adrian Pérez de Castro",
 
 	"navigation": [
-		{ "text": "Blog",  "link": "index.html" },
-		{ "text": "About", "link": "about.html" }
+		{ "text": "Articles", "link": "/" },
+		{ "text": "About",    "link": "/about.html" }
 	],
 
 	"@content": {
