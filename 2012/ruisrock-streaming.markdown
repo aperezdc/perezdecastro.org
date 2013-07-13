@@ -1,4 +1,5 @@
 title: El festival Ruisrock 2012, en streaming
+lang:  es
 date:  2012-07-03 16:30
 tags:  finland music
 

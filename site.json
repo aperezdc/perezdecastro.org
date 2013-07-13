@@ -8,7 +8,7 @@
 
 	"@content": {
 		"Page": ["*.markdown", "*.mustache"],
-		"Post": ["posts/**.markdown"]
+		"Post": ["20*/**/*.markdown"]
 	},
 	"@layout": {
 		"@default": "layout/base.mustache"
