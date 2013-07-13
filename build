@@ -16,7 +16,7 @@ for (var kind in site.content) {
   var items = site.content[kind];
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
-    var dest = P.dirname(item.relpath()) + P.sep + item.slug() + ".html";
+    var dest = item.slug() + ".html";
     console.log(kind + " " + item.relpath() + " → " + dest);
     F.writeFile(dest, item.render(), function (err) {
       if (err) throw err;

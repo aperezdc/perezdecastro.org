@@ -68,8 +68,9 @@ var Page = Class.$extend({
 	__init__: function (site, path) {
 		this.site = site;
 		this._date = null;
+		this._slug = null;
 		this._path = P.normalize(P.resolve(path));
-		this._suffix = P.extname(this.path);
+		this._suffix = P.extname(this._path);
 		this._metadata = null;
 	},
 
@@ -106,8 +107,16 @@ var Page = Class.$extend({
 				d.getFullYear());
 	},
 
+	slug: function () {
+		if (this._slug === null) {
+			var basename = this.metadata("slug", P.basename(this._path, this._suffix));
+			var reldir = P.dirname(this._path).substring(this.site.basedir.length + 1);
+			this._slug = reldir ? reldir + "/" + basename : basename;
+		}
+		return this._slug;
+	},
+
 	content   : function () { return this.get_content("html"); },
-	slug      : function () { return this.metadata("slug", P.basename(this._path, P.extname(this._path))); },
 	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
 	template  : function () { return this.site.get_template("page"); },
 	body      : function () { return this.metadata("body"); },
