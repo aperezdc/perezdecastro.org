@@ -91,11 +91,14 @@ var Page = Class.$extend({
 			var datestring = this.metadata("date");
 			if (datestring) {
 				try {
-					this._date = Date(datestring);
+					this._date = new Date(datestring);
 				} catch (e) {
+					// Do nothing, will pickl date from filesystem below.
 				}
 			}
-			this._date = F.statSync(this._path).mtime;
+			if (this._date === null) {
+				this._date = F.statSync(this._path).mtime;
+			}
 		}
 		return this._date;
 	},
@@ -247,7 +250,7 @@ var Site = Class.$extend({
 					this._sorted_posts[i] = this.content.Post[i];
 				}
 				this._sorted_posts.sort(function (a, b) {
-					return a.get_date().toTime() - b.get_date(a).toTime();
+					return b.get_date().getTime() - a.get_date().getTime();
 				});
 			}
 		}
