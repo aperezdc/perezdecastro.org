@@ -1,0 +1,39 @@
+output-suffix: atom
+layout: -
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	{{# site }}
+	<title type="html">{{ title }}</title>
+	{{# tagline }}<subtitle type="html">{{ tagline }}</subtitle>{{/ tagline }}
+	<link href="http://adrian.perezdecastro.org/feed.atom" rel="self"/>
+	<link href="http://adrian.perezdecastro.org/" />
+	<id>http://adrian.perezdecastro.org/</id>
+	<updated>{{ rfc822date }}</updated>
+	<author>
+		{{# author }}<name>{{ author }}</name>{{/ author }}
+		{{# author_email }}<email>{{ author_email }}</email>{{/ author_email }}
+	</author>
+	<generator uri="https://github.com/aperezdc/perezdecastro.org">
+		perezdecastro.org static site builder
+	</generator>
+
+	{{# content.articles }}
+	<entry>
+		<title type="html">{{ title }}</title>
+		<id>http://adrian.perezdecastro.org/{{ slug }}.{{ output_suffix }}</id>
+		<updated>{{ file_rfc822date }}</updated>
+		<published>{{ rfc822date }}</published>
+		<link rel="alternate" type="text/html" href="{{ slug }}.html" />
+		<content type="html">{{ content }}</content>
+		{{# author }}
+		<author>
+			<name>{{ author }}</name>
+			{{# author_email }}<email>{{ author_email }}</email>{{/ author_email }}
+		</author>
+		{{/ author }}
+	</entry>
+	{{/ content.articles }}
+
+	{{/ site }}
+</feed>
