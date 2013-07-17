@@ -163,6 +163,16 @@ var Page = Class.$extend({
 		return this._sidebar;
 	},
 
+	author: function () {
+		var author = this.metadata("author");
+		return author ? author : this.site.author();
+	},
+
+	author_email: function () {
+		var author_email = this.metadata("author_email");
+		return author_email ? author_email : this.site.author_email();
+	},
+
 	output_suffix: function () {
 		return this.metadata("output_suffix", "html");
 	},
@@ -286,7 +296,8 @@ var Site = Class.$extend({
 
 	title  : function () { return this.metadata("title"); },
 	tagline: function () { return this.metadata("tagline"); },
-
+	author : function () { return this.metadata("author"); },
+	author_email: function () { return this.metadata("author_email"); },
 });
 exports.Site = Site;
 
