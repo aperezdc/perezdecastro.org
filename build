@@ -18,8 +18,8 @@ for (var kind in site.content) {
   console.log("Building “" + kind + "”:");
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
-    var dest = item.slug() + ".html";
-    console.log("  html: " + item.relpath());
+    var dest = item.slug() + "." + item.output_suffix();
+    console.log("  " + item.output_suffix() + ": " + item.relpath());
     F.writeFile(dest, item.render(), function (err) {
       if (err) throw err;
     });

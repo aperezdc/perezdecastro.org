@@ -163,6 +163,10 @@ var Page = Class.$extend({
 		return this._sidebar;
 	},
 
+	output_suffix: function () {
+		return this.metadata("output_suffix", "html");
+	},
+
 	is_index  : function () { return this.slug() == "index"; },
 	content   : function () { return this.get_content("html"); },
 	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
