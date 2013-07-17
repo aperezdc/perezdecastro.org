@@ -77,6 +77,7 @@ var Page = Class.$extend({
 		this._tags = null;
 		this._date = null;
 		this._slug = null;
+		this._sidebar = null;
 		this._path = P.normalize(P.resolve(path));
 		this._suffix = P.extname(this._path);
 		this._metadata = null;
@@ -144,6 +145,18 @@ var Page = Class.$extend({
 		return this._tags;
 	},
 
+	sidebar: function () {
+		if (!this._sidebar) {
+			var sidebar = this.metadata("sidebar");
+			if (sidebar) {
+				this._sidebar = this.site.get_sidebar(sidebar);
+			} else {
+				this._sidebar = false;
+			}
+		}
+		return this._sidebar;
+	},
+
 	is_index  : function () { return this.slug() == "index"; },
 	content   : function () { return this.get_content("html"); },
 	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
@@ -194,6 +207,7 @@ var Site = Class.$extend({
 		this._metafile = this.basedir + P.sep + "site.json";
 		this._metadata = null;
 		this._template_cache = {};
+		this._sidebar_cache = {};
 		this._sorted_posts = null;
 		this._load_content(); // Must be the last thing done
 	},
@@ -234,6 +248,17 @@ var Site = Class.$extend({
 			this._template_cache[name] = template;
 		}
 		return this._template_cache[name];
+	},
+
+	get_sidebar: function (relpath) {
+		if (this._sidebar_cache[relpath] === undefined) {
+			if (F.statSync(this.basedir + "/" + relpath)) {
+				this._sidebar_cache[relpath] = new Page(this, relpath);
+			} else {
+				this._sidebar_cache[relpath] = false;
+			}
+		}
+		return this._sidebar_cache[relpath];
 	},
 
 	convert: function (path, to, data) {
