@@ -2,6 +2,7 @@ title: Autoengaño
 lang: es
 date: 2007-12-03 20:12
 tags: minirrelato
+Category: はりおの階
 
 El agua de la ducha caía sobre su cabeza, aclarándole el pelo y las
 ideas. Siempre buscaba una explicación a todo, pues le resultaba

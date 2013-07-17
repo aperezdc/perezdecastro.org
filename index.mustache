@@ -1,14 +1,15 @@
-title: Articles - Adrián Pérez de Castro
+title: Articles
 hide_title: true
+sidebar: sidebar/index.markdown
 
 {{# site }}
-<table id="postlist">
+<table id="article-list">
 	<tbody>
-	{{# posts }}
+	{{# content.articles }}
 		<tr>
-			<td class="date">{{ date }} &mdash;</td>
+			<td class="date">{{ date }}</td>
 			<td><a href="/{{ slug }}.html">{{ title }}</a></td>
 		</tr>
-	{{/ posts }}
+	{{/ content.articles }}
 </dl>
 {{/ site }}

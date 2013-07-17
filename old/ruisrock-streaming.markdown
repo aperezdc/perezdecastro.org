@@ -1,7 +1,8 @@
 title: El festival Ruisrock 2012, en streaming
-lang:  es
-date:  2012-07-03 16:30
-tags:  finland music
+lang: es
+date: 2012-07-03 16:30
+tags: finland music
+category: はりおの階
 
 Para quienes puedan estar interesados en un poco de música finlandesa en
 directo, la [YLE](http://es.wikipedia.org/wiki/Yleisradio) va a emitir

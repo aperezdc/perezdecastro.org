@@ -1,14 +1,17 @@
 {
-	"title": "Adrian Pérez de Castro",
+	"title": "perezdecastro.org",
+	"tagline": "Moikka! Here's Adrián. I work for <a href='http://igalia.com'>Igalia</a>.",
 
 	"navigation": [
-		{ "text": "Articles", "link": "/" },
-		{ "text": "About",    "link": "/about.html" }
+		{ "text": "Twitter",  "link": "http://twitter.com/aperezdc" },
+		{ "text": "GitHub",   "link": "https://github.com/aperezdc?tab=repositories" },
+		{ "text": "Photos",   "link": "www.flickr.com/photos/aperezdc/" }
 	],
 
 	"@content": {
-		"Page": ["*.markdown", "*.mustache"],
-		"Post": ["20*/**/*.markdown"]
+		"pages"   : ["*.markdown", "*.mustache"],
+		"articles": ["20*/**/*.markdown"],
+		"oldstuff": ["old/**/*.markdown"]
 	},
 	"@layout": {
 		"@default": "layout/base.mustache"

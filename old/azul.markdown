@@ -2,6 +2,7 @@ title: Azul
 lang: es
 date: 2010-06-14 05:03
 tags: minirrelato
+category: はりおの階
 
 El bar era una vieja tasca con mostrador de zinc, sillas de formica, un
 televisor encendido y fotos del Rayo Vallecano en la pared. No había

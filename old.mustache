@@ -1,0 +1,20 @@
+title: Old Articles
+comments: false
+sidebar: sidebar/oldstuff.markdown
+
+{{# site }}
+<table id="article-list">
+	<tbody>
+	{{# content.oldstuff }}
+		<tr>
+			<td class="date">{{ date }}</td>
+			<td>
+				<a href="/{{ slug }}.html">{{ title }}</a>
+				{{# category }}
+				<span class="category">{{ category }}</span>
+				{{/ category }}
+			</td>
+		</tr>
+	{{/ content.oldstuff }}
+</dl>
+{{/ site }}

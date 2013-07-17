@@ -1,6 +1,7 @@
 title: Virtualization extensions with a Vaio TZ11MN/N
 date: 2008-04-26 20:24
 author: Hario
+Category: はりおの階
 tags: hardware linux gentoo
 
 

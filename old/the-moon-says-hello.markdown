@@ -2,6 +2,7 @@ title: The Moon says hello
 date: 2007-10-15 17:49
 tags: minirrelato
 lang: es
+Category: はりおの階
 
 Había pasado más de una hora cuando la música, con el volumen alto y la
 insistencia machacona típicas del tugurio nocturno al que habían ido,

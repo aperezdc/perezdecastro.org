@@ -2,6 +2,7 @@ title: Cómo mejorar tu inglés en cuatro cómodos pasos
 lang: es
 date: 2012-02-16 17:22
 tags: education learning advice
+category: はりおの階
 
 Hace unos días se publicó [una noticia en El
 País](http://sociedad.elpais.com/sociedad/2012/02/11/actualidad/1328962500_273909.html)
