@@ -121,6 +121,10 @@ var Page = Class.$extend({
 				d.getFullYear());
 	},
 
+	file_rfc822date: function () {
+		return F.statSync(this._path).mtime.toISOString();
+	},
+
 	slug: function () {
 		if (this._slug === null) {
 			var basename = this.metadata("slug", P.basename(this._path, this._suffix));
@@ -170,6 +174,7 @@ var Page = Class.$extend({
 	navigation: function () { return this.metadata("navigation"); },
 	hide_title: function () { return this.metadata("hide_title"); },
 	nocomments: function () { return this.metadata("comments").trim() != "true"; },
+	rfc822date: function () { return this.get_date().toISOString(); },
 });
 exports.Page = Page;
 
@@ -211,7 +216,7 @@ var Site = Class.$extend({
 		this._metadata = null;
 		this._template_cache = {};
 		this._sidebar_cache = {};
-		this._sorted_posts = null;
+		this._build_date = new Date();
 		this._load_content(); // Must be the last thing done
 	},
 
@@ -269,6 +274,10 @@ var Site = Class.$extend({
 
 	convert: function (path, to, data) {
 		return this.converter.convert(P.extname(path), to, data.body(), data);
+	},
+
+	rfc822date: function () {
+		return this._build_date.toISOString();
 	},
 
 	title  : function () { return this.metadata("title"); },
