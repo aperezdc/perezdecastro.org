@@ -7,7 +7,7 @@
 
 require("./classy");
 var F = require("fs");
-var V = require("veil");
+var V = require("veil").defaults({ keys: "underscore" });
 var P = require("path");
 var G = require("glob");
 var M = require("mustache");
