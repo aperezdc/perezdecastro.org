@@ -74,6 +74,7 @@ var Page = Class.$extend({
 
 	__init__: function (site, path) {
 		this.site = site;
+		this._tags = null;
 		this._date = null;
 		this._slug = null;
 		this._path = P.normalize(P.resolve(path));
@@ -126,24 +127,6 @@ var Page = Class.$extend({
 		return this._slug;
 	},
 
-	content   : function () { return this.get_content("html"); },
-	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
-	template  : function () { return this.site.get_template("page"); },
-	body      : function () { return this.metadata("body"); },
-	title     : function () { return this.metadata("title"); },
-	subtitle  : function () { return this.metadata("subtitle"); },
-	navigation: function () { return this.metadata("navigation"); },
-	hide_title: function () { return this.metadata("hide_title"); },
-});
-exports.Page = Page;
-
-
-var Post = Page.$extend({
-	__init__: function (site, path) {
-		this.$super(site, path);
-		this._tags = null;
-	},
-
 	tags: function () {
 		if (!this._tags) {
 			this._tags = [];
@@ -161,9 +144,18 @@ var Post = Page.$extend({
 		return this._tags;
 	},
 
-	template  : function () { return this.site.get_template("post"); },
+	is_index  : function () { return this.slug() == "index"; },
+	content   : function () { return this.get_content("html"); },
+	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
+	template  : function () { return this.site.get_template("page"); },
+	body      : function () { return this.metadata("body"); },
+	title     : function () { return this.metadata("title"); },
+	subtitle  : function () { return this.metadata("subtitle"); },
+	category  : function () { return this.metadata("category"); },
+	navigation: function () { return this.metadata("navigation"); },
+	hide_title: function () { return this.metadata("hide_title"); },
 });
-exports.Post = Post;
+exports.Page = Page;
 
 
 var Converter = Class.$extend({
