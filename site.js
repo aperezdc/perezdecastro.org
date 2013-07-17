@@ -11,7 +11,14 @@ var V = require("veil");
 var P = require("path");
 var G = require("glob");
 var M = require("mustache");
+var H = require("highlight.js");
 var marked = require("marked");
+
+marked.setOptions({
+	highlight: function (code, lang) {
+		return (lang === undefined) ? code : H.highlight(lang, code).value;
+	},
+});
 
 
 var RenderMixin = {
