@@ -24,8 +24,10 @@ marked.setOptions({
 var RenderMixin = {
 	render: function () {
 		var template = this.template();
-		if (!template)
-			throw "No template defined";
+
+		// Use the own contents as template
+		if (template === null)
+			template = this.body()
 
 		var render_data = this;
 		if (typeof(this.render_data) == "function")
@@ -160,7 +162,7 @@ var Page = Class.$extend({
 	is_index  : function () { return this.slug() == "index"; },
 	content   : function () { return this.get_content("html"); },
 	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
-	template  : function () { return this.site.get_template("page"); },
+	template  : function () { return this.site.get_template(this.metadata("layout", "page")); },
 	body      : function () { return this.metadata("body"); },
 	title     : function () { return this.metadata("title"); },
 	subtitle  : function () { return this.metadata("subtitle"); },
@@ -235,6 +237,9 @@ var Site = Class.$extend({
 	},
 
 	get_template: function (name) {
+		if (name == "-")
+			return null;
+
 		var layout = this.metadata("@layout");
 		if (!layout)
 			throw "No layout templates defined";
