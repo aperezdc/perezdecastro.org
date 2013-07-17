@@ -200,22 +200,21 @@ var Site = Class.$extend({
 
 	_load_content: function () {
 		var content = this.metadata("@content");
-		if (!content) content = { "Page": ["*.markdown", "*.mustache"] };
-		for (var clsname in content) {
-			var patterns = content[clsname];
-			var cls = exports[clsname];
-			if (!cls) continue;
-
-			var items = [];
+		if (!content) content = { "pages": ["*.markdown", "*.mustache"] };
+		for (var kind in content) {
+			var patterns = content[kind];
+			this.content[kind] = [];
 			for (var i = 0; i < patterns.length; i++) {
-				var files = G.sync(patterns[i], { cwd: this.basedir,
-					root: this.basedir, nosort: true });
-				if (!files) continue;
-				for (var j = 0; j < files.length; j++)
-					items[items.length] = new cls(this, files[j]);
-			}
-			if (items.length) {
-				this.content[clsname] = items;
+				var files = G.sync(patterns[i], { cwd: this.basedir, root: this.basedir, nosort: true });
+				if (!files) {
+					continue;
+				}
+				for (var j = 0; j < files.length; j++) {
+					this.content[kind][this.content[kind].length] = new Page(this, files[j]);
+				}
+				this.content[kind].sort(function (a, b) {
+					return b.get_date().getTime() - a.get_date().getTime();
+				});
 			}
 		}
 	},
@@ -241,22 +240,7 @@ var Site = Class.$extend({
 		return this.converter.convert(P.extname(path), to, data.body(), data);
 	},
 
-	get_sorted_posts: function () {
-		if (this._sorted_posts === null) {
-			this._sorted_posts = [];
-			if (this.content["Post"]) {
-				for (var i = 0; i < this.content.Post.length; i++) {
-					this._sorted_posts[i] = this.content.Post[i];
-				}
-				this._sorted_posts.sort(function (a, b) {
-					return b.get_date().getTime() - a.get_date().getTime();
-				});
-			}
-		}
-		return this._sorted_posts;
-	},
 
-	posts  : function () { return this.get_sorted_posts(); },
 	title  : function () { return this.metadata("title"); },
 	tagline: function () { return this.metadata("tagline"); },
 
