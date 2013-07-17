@@ -66,17 +66,25 @@ body {
 
 code,
 pre {
-   font-family: "PT Mono", "Source Code Pro", monospace;
-   background: #f8f8f8;
-   border: 1px solid #ddd;
+   font-family: "Source Code Pro", monospace;
+   background: #f8f8fa;
+   border: 1px solid #e4e4f8;
    padding-left: 0.25em;
    padding-right: 0.25em;
    border-radius: 3px;
+   line-height: 110%;
 }
-pre > code {
+pre code {
    border: none;
    padding-left: 0;
    padding-right: 0;
+   font-size: 90%;
+}
+code {
+   font-size: 92%;
+}
+pre {
+   padding-bottom: 0.25em;
 }
 
 .wrapper {
@@ -84,27 +92,31 @@ pre > code {
     margin: 0 5%;
 }
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
+/* ==============
+    ALL: Theming
+   ============== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+   padding-bottom: 3px;
+   border-bottom: 1px solid #aaf;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+    border-top: 1px solid #aaf;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+   background: #f8f8fa;
 }
 
 .title {
-    color: white;
+   font-family: Knewave, serif;
+   font-weight: normal;
+   color: #66c;
+   margin-bottom: 0;
 }
 
 /* ==============
@@ -112,30 +124,38 @@ pre > code {
    ============== */
 
 nav ul {
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
+}
+
+nav ul li {
+   display: inline;
 }
 
 nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-
-    color: white;
-    background: #e44d26;
-}
-
-nav a:hover,
-nav a:visited {
-    color: white;
+   padding: 10px 10px 4px 10px;
+   border-bottom: 4px solid #aaf;
+   text-transform: lowercase;
 }
 
 nav a:hover {
-    text-decoration: underline;
+   color: #006;
+   border-bottom-color: #00a;
+}
+
+nav ul li.back {
+   display: block;
+   margin-bottom: 0.8em;
+}
+
+p.image {
+   text-align: center;
+   margin: 1.5em 0;
+}
+p.image img {
+   padding: 0.5em;
+   border: 1px solid #f8f8fa;
+   border-radius: 3px;
 }
 
 /* ==============
@@ -147,17 +167,19 @@ nav a:hover {
 }
 
 .main article h1 {
-    font-size: 2em;
+   font-size: 2em;
 }
 
 .main aside {
-    color: white;
-    padding: 0px 5% 10px;
+   font-size: 90%;
+   color: #66c;
+   padding: 0px 5% 10px;
+   border: 1px solid #aaf;
+   border-radius: 4px;
 }
 
 .footer-container footer {
-    color: white;
-    padding: 20px 0;
+   padding: 20px 0;
 }
 
 /* ===============
@@ -172,18 +194,35 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+a {
+   color: #008;
+   text-decoration: none;
+   border-bottom: 1px solid #aaf;
+}
 
+a:hover {
+   color: #080;
+   border-bottom-color: #8a8;
+}
 
+table#article-list td {
+   display: block;
+}
 
+table#article-list tr:hover {
+}
 
+table#article-list td.date {
+   color: #aaa;
+   font-weight: lighter;
+   font-size: small;
+   margin-top: 1.5em;
+   vertical-align: top;
+}
 
-
-
-
-
-
-
-
+table#article-list span.category {
+   display: none;
+}
 
 
 /* ==========================================================================
@@ -192,78 +231,85 @@ nav a:hover {
 
 @media only screen and (min-width: 480px) {
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
+/* ==============
+    INTERMEDIATE
+   ============== */
 
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
+   .header-container {
+      -webkit-box-shadow: 0 2px 4px #ddd;
+         -moz-box-shadow: 0 2px 4px #ddd;
+              box-shadow: 0 2px 4px #ddd;
+   }
+   .main aside {
+      margin-bottom: 2em;
+      -webkit-box-shadow: 0 4px 8px #ccc;
+         -moz-box-shadow: 0 4px 8px #ccc;
+              box-shadow: 0 4px 8px #ccc;
+   }
 
-    nav li:first-child a {
-        margin-left: 0;
-    }
+   nav li:first-child a {
+      margin-left: -10px;
+   }
 
-    nav li:last-child a {
-        margin-right: 0;
-    }
+   nav li:last-child a {
+      margin-right: -10px;
+   }
+
+   nav ul li.back {
+      display: inline;
+      margin-bottom: 0.8em;
+   }
+
+   table#article-list td {
+      display: table-cell;
+   }
+
+   table#article-list td.date {
+      width: 10em;
+      text-align: right;
+      color: #aaa;
+      padding-right: 0.2em;
+      font-weight: lighter;
+      padding-right: 1em;
+   }
+
+   table#article-list span.category {
+      color: #aaa;
+      padding-left: 0.5em;
+      display: inline;
+   }
+
+   table#article-list span.category:before {
+      content: "→";
+      padding-right: 0.5em;
+   }
 
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
 
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
+   .oldie nav a {
         margin: 0 0.7%;
-    }
+   }
 }
 
 @media only screen and (min-width: 768px) {
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
+/* ======
+    WIDE
+   ====== */
 
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
+   .main aside {
+      border: none;
+      border-radius: 0;
+      border-top: 1px solid #aaf;
+      padding: 0.5em 2em;
+      float: right;
+      top: 2em;
+      left: 800px;
+      width: 10em;
+      margin: 2em;
+   }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -272,10 +318,14 @@ nav a:hover {
     Maximal Width
    =============== */
 
-    .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
-        margin: 0 auto;
-    }
+   .main article {
+      width: 700px;
+   }
+
+   .wrapper {
+      width: 1026px; /* 1140px - 10% for margins */
+      margin: 0 auto;
+   }
 }
 
 /* ==========================================================================
@@ -377,7 +427,7 @@ nav a:hover {
 
     pre,
     blockquote {
-        border: 1px solid #999;
+        border: 1px solid #aaf;
         page-break-inside: avoid;
     }
 
@@ -411,12 +461,3 @@ nav a:hover {
     }
 }
 
-/* =====================
-    Site-Specific Rules
-   ===================== */
-table#postlist td.date {
-   text-align: right;
-   color: #aaa;
-   padding-right: 0.2em;
-   font-weight: lighter;
-}

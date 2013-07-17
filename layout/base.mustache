@@ -8,9 +8,12 @@
 	<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width">
 
-	<title>{{ title }}</title>
+	<title>{{ title }}{{# site }}{{# title }} &mdash; {{ title }}{{/ title }}{{/ site }}</title>
 
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Knewave&text=perezdecastro.org" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:700,400|Raleway:700,400" type="text/css">
 	<link rel="stylesheet" href="/css/normalize.min.css">
+	<link rel="stylesheet" href="/css/highlight.css">
 	<link rel="stylesheet" href="/css/main.css">
 
         <!--[if lt IE 9]>
@@ -23,38 +26,43 @@
             <header class="wrapper clearfix">
 		{{# site }}
 		<h1 class="title">{{ title }}</h1>
-		{{# tagline }}<p>{{ . }}</p>{{/ tagline }}
+		{{# tagline }}<p>{{{ tagline }}}</p>{{/ tagline }}
+		{{/ site }}
                 <nav>
                     <ul>
-		        {{# navigation }}
-			<li><a href="{{ link }}">{{ text }}</a></li>
-			{{/ navigation }}
+			{{^ is_index }}
+			  <li class="back"><a href="javascript:history.go(-1)">↫ Back to the index</a></li>
+			{{/ is_index }}
+			{{# site }}
+			  {{# navigation }}
+			  <li><a href="{{ link }}">{{ text }}</a></li>
+			  {{/ navigation }}
+			{{/ site }}
                     </ul>
 	    	</nav>
-		{{/ site }}
             </header>
         </div>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
 
+		{{# sidebar }}
+                <aside>
+		    {{# title }}<h3>{{ title }}</h3>{{/ title }}
+		    {{{ content }}}
+	    	</aside>
+	    	{{/ sidebar }}
+
                 <article>
                     {{^ hide_title }}
                     <header>
 			<h1>{{ title }}</h1>
-			{{# subtitle }}<p>{{ . }}</p>{{/ subtitle }}
+			{{# subtitle }}<p>{{ subtitle }}</p>{{/ subtitle }}
 		    </header>
 		    {{/ hide_title }}
 
 		    {{{ content }}}
                 </article>
-
-		{{# sidebar }}
-                <aside>
-		    {{# title }}<h3>{{ . }}</h3>{{/ title }}
-		    {{{ content }}}
-	    	</aside>
-	    	{{/ sidebar }}
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
