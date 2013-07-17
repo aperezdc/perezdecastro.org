@@ -167,13 +167,14 @@ var Page = Class.$extend({
 	category  : function () { return this.metadata("category"); },
 	navigation: function () { return this.metadata("navigation"); },
 	hide_title: function () { return this.metadata("hide_title"); },
+	nocomments: function () { return this.metadata("comments").trim() != "true"; },
 });
 exports.Page = Page;
 
 
 var Converter = Class.$extend({
 	__init__: function () {
-		this.add("markdown", "html", function (data, extra) { return marked (data); });
+		this.add("markdown", "html", function (data, extra) { return marked(data); });
 		this.add("mustache", "html", function (data, extra) { return M.render(data, extra); });
 	},
 
@@ -242,7 +243,7 @@ var Site = Class.$extend({
 		if (!name) name = layout["@default"];
 		if (!name) name = "default.mustache";
 
-		if (!this._template_cache[name]) {
+		if (this._template_cache[name] === undefined) {
 			var template_file = P.resolve(this.basedir + P.sep + name);
 			var template = F.readFileSync(template_file, { encoding: "utf-8" });
 			this._template_cache[name] = template;
@@ -264,7 +265,6 @@ var Site = Class.$extend({
 	convert: function (path, to, data) {
 		return this.converter.convert(P.extname(path), to, data.body(), data);
 	},
-
 
 	title  : function () { return this.metadata("title"); },
 	tagline: function () { return this.metadata("tagline"); },

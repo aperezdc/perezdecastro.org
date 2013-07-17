@@ -1,5 +1,6 @@
 #! /usr/bin/env node
-/*
+/* vim: ft=javascript
+ *
  * build.js
  * Copyright (C) 2013 Adrian Perez <aperez@igalia.com>
  *
@@ -14,10 +15,11 @@ site = new S.Site(".");
 
 for (var kind in site.content) {
   var items = site.content[kind];
+  console.log("Building “" + kind + "”:");
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
     var dest = item.slug() + ".html";
-    console.log(kind + " " + item.relpath() + " → " + dest);
+    console.log("  html: " + item.relpath());
     F.writeFile(dest, item.render(), function (err) {
       if (err) throw err;
     });
