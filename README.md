@@ -17,9 +17,13 @@ scripts. The following packages are needed:
 - `marked` - for rendering Markdown to HTML.
 - `glob` - for scanning the file system.
 - `veil` - for loading metadata and content from source files.
-- `classy.js` - for easier OOP.
 - `highlight.js` - for code syntax highlighting.
+- `classy.js` - for easier OOP.
+
+All packages can be installed with `npm`, except for `classy.js`
+which is bundled in the repository.
 
 Content files are MIME-like, with a series of headers, and a body
-which conforms the actual content. See under `posts/` for examples.
+which conforms the actual content. See under the year-named
+directories for examples.
 
