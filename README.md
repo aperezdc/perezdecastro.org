@@ -18,6 +18,7 @@ scripts. The following packages are needed:
 - `glob` - for scanning the file system.
 - `veil` - for loading metadata and content from source files.
 - `classy.js` - for easier OOP.
+- `highlight.js` - for code syntax highlighting.
 
 Content files are MIME-like, with a series of headers, and a body
 which conforms the actual content. See under `posts/` for examples.
