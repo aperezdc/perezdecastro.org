@@ -246,7 +246,11 @@ var Site = Class.$extend({
 					continue;
 				}
 				for (var j = 0; j < files.length; j++) {
-					this.content[kind][this.content[kind].length] = new Page(this, files[j]);
+					var page = new Page(this, files[j]);
+					// Filter elements which are to be published in the future.
+					if (page.get_date() <= this._build_date) {
+						this.content[kind][this.content[kind].length] = page;
+					}
 				}
 				this.content[kind].sort(function (a, b) {
 					return b.get_date().getTime() - a.get_date().getTime();
