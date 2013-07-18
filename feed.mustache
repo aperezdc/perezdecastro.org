@@ -6,9 +6,9 @@ layout: -
 	{{# site }}
 	<title type="html">{{ title }}</title>
 	{{# tagline }}<subtitle type="html">{{ tagline }}</subtitle>{{/ tagline }}
-	<link href="http://perezdecastro.org/feed.atom" rel="self"/>
-	<link href="http://perezdecastro.org/" />
-	<id>http://perezdecastro.org/</id>
+	<link href="{{{ baseurl }}}/feed.atom" rel="self"/>
+	<link href="{{{ baseurl }}}/" />
+	<id>{{{ baseurl }}}</id>
 	<updated>{{ rfc822date }}</updated>
 	<author>
 		{{# author }}<name>{{ author }}</name>{{/ author }}
@@ -21,10 +21,10 @@ layout: -
 	{{# content.articles }}
 	<entry>
 		<title type="html">{{ title }}</title>
-		<id>http://perezdecastro.org/{{ slug }}.{{ output_suffix }}</id>
+		<id>{{{ baseurl }}}/{{{ slug }}}.{{{ output_suffix }}}</id>
 		<updated>{{ file_rfc822date }}</updated>
 		<published>{{ rfc822date }}</published>
-		<link rel="alternate" type="text/html" href="{{ slug }}.html" />
+		<link rel="alternate" type="text/html" href="{{{ baseurl }}}/{{{ slug }}}.{{{ output_suffix }}}" />
 		<content type="html">{{ content }}</content>
 		{{# author }}
 		<author>

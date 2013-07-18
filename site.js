@@ -189,6 +189,7 @@ var Page = Class.$extend({
 	hide_title: function () { return this.metadata("hide_title"); },
 	nocomments: function () { return this.metadata("comments").trim() != "true"; },
 	rfc822date: function () { return this.get_date().toISOString(); },
+	baseurl   : function () { return this.site.baseurl(); },
 });
 exports.Page = Page;
 
@@ -298,9 +299,10 @@ var Site = Class.$extend({
 		return this._build_date.toISOString();
 	},
 
-	title  : function () { return this.metadata("title"); },
+	title: function () { return this.metadata("title"); },
+	author: function () { return this.metadata("author"); },
 	tagline: function () { return this.metadata("tagline"); },
-	author : function () { return this.metadata("author"); },
+	baseurl: function () { return this.metadata("baseurl"); },
 	author_email: function () { return this.metadata("author_email"); },
 });
 exports.Site = Site;
