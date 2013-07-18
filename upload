@@ -1,0 +1,19 @@
+#! /bin/bash
+
+exec rsync -hrlxzc \
+    --progress      \
+    --safe-links     \
+    --exclude=.git/   \
+    --exclude=build    \
+    --exclude=upload    \
+    --exclude=site.js    \
+    --exclude=layout/     \
+    --exclude=sidebar/     \
+    --exclude=classy.js     \
+    --exclude=README.md      \
+    --exclude=site.json       \
+    --exclude=twistd.pid       \
+    --exclude=twistd.log        \
+    --exclude=node_modules/      \
+    . shinto.homeunix.org:/srv/http/
+
