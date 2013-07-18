@@ -21,10 +21,10 @@ layout: -
 	{{# content.articles }}
 	<entry>
 		<title type="html">{{ title }}</title>
-		<id>{{{ baseurl }}}/{{{ slug }}}.{{{ output_suffix }}}</id>
+		<id>{{{ fullurl }}}</id>
 		<updated>{{ file_rfc822date }}</updated>
 		<published>{{ rfc822date }}</published>
-		<link rel="alternate" type="text/html" href="{{{ baseurl }}}/{{{ slug }}}.{{{ output_suffix }}}" />
+		<link rel="alternate" type="text/html" href="{{{ fullurl }}}" />
 		<content type="html">{{ content }}</content>
 		{{# author }}
 		<author>

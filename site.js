@@ -190,6 +190,8 @@ var Page = Class.$extend({
 	nocomments: function () { return this.metadata("comments").trim() != "true"; },
 	rfc822date: function () { return this.get_date().toISOString(); },
 	baseurl   : function () { return this.site.baseurl(); },
+	url       : function () { return this.slug() + "." + this.output_suffix(); },
+	fullurl   : function () { return this.baseurl() + "/" + this.url(); },
 });
 exports.Page = Page;
 
