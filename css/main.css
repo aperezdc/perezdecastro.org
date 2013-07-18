@@ -152,6 +152,9 @@ p.image {
    text-align: center;
    margin: 1.5em 0;
 }
+p.image a {
+   border-bottom: none;
+}
 p.image img {
    padding: 0.5em;
    border: 1px solid #f8f8fa;
