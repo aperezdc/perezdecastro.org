@@ -6,9 +6,9 @@ layout: -
 	{{# site }}
 	<title type="html">{{ title }}</title>
 	{{# tagline }}<subtitle type="html">{{ tagline }}</subtitle>{{/ tagline }}
-	<link href="http://adrian.perezdecastro.org/feed.atom" rel="self"/>
-	<link href="http://adrian.perezdecastro.org/" />
-	<id>http://adrian.perezdecastro.org/</id>
+	<link href="http://perezdecastro.org/feed.atom" rel="self"/>
+	<link href="http://perezdecastro.org/" />
+	<id>http://perezdecastro.org/</id>
 	<updated>{{ rfc822date }}</updated>
 	<author>
 		{{# author }}<name>{{ author }}</name>{{/ author }}
@@ -21,7 +21,7 @@ layout: -
 	{{# content.articles }}
 	<entry>
 		<title type="html">{{ title }}</title>
-		<id>http://adrian.perezdecastro.org/{{ slug }}.{{ output_suffix }}</id>
+		<id>http://perezdecastro.org/{{ slug }}.{{ output_suffix }}</id>
 		<updated>{{ file_rfc822date }}</updated>
 		<published>{{ rfc822date }}</published>
 		<link rel="alternate" type="text/html" href="{{ slug }}.html" />
