@@ -59,11 +59,11 @@ As an example, the [regular expression syntax used y SPARQL][] does not
 include predefined character classes, but as SQLite uses [POSIX regular
 expressions][] internally, the following filter expression works:
 
-~~~~ {style="margin:1px solid #ccc;background: #ededed;padding: 0.2em"}
-  SELECT ?name
-  WHERE { ?urn nco:imNickname ?name
-          FILTER (bound(?name) && !REGEX(?name, "[[:space:]]+")) }
-~~~~
+```sql
+SELECT ?name
+WHERE { ?urn nco:imNickname ?name
+        FILTER (bound(?name) && !REGEX(?name, "[[:space:]]+")) }
+```
 
 *(Obtains the nick names of instant messaging contacts which **do not**
 have spaces in them.)*
@@ -72,12 +72,12 @@ Another example of undocumented behaviour is the fact that aggregate
 functions (e.g. `COUNT`) can be used on the result of a property
 function. For example, take this query:
 
-~~~~ {style="margin:1px solid #ccc;background: #ededed;padding: 0.2em"}
-  SELECT nie:url(?urn) COUNT(?regions)
-  WHERE { ?urn rdf:type nmm:Photo .
-          OPTIONAL { ?urn nfo:hasRegionOfInterest ?region } }
-  GROUP BY ?urn
-~~~~
+```sql
+SELECT nie:url(?urn) COUNT(?regions)
+WHERE { ?urn rdf:type nmm:Photo .
+        OPTIONAL { ?urn nfo:hasRegionOfInterest ?region } }
+GROUP BY ?urn
+```
 
 *(Obtains the URLs of images and the number of associated regions of
 interest.)*
@@ -89,11 +89,11 @@ concatenation of the values separated by commas, so `COUNT` would be
 expected choke when applied to that... No! Actually, the following works
 as expected:
 
-~~~~ {style="margin:1px solid #ccc;background: #ededed;padding: 0.2em"}
-  SELECT nie:url(?urn) COUNT(nfo:hasRegionOfInterest(?urn))
-  WHERE { ?urn rdf:type nmm:Photo }
-  GROUP BY ?urn
-~~~~
+```sql
+SELECT nie:url(?urn) COUNT(nfo:hasRegionOfInterest(?urn))
+WHERE { ?urn rdf:type nmm:Photo }
+GROUP BY ?urn
+```
 
 *(Obtains the URLs of images and the number of associated regions of
 interest — faster version.)*
