@@ -238,6 +238,20 @@ table#article-list span.category {
     INTERMEDIATE
    ============== */
 
+   #header-avatar {
+      margin-top: 1.25em;
+      width: 72px;
+      height: 72px;
+      display: block;
+      float: left;
+      background: url(avatar.png) 50% 50%;
+      border-radius: 36px;
+      border: 1px solid #66c;
+      -webkit-box-shadow: 0 2px 4px #ccc;
+         -moz-box-shadow: 0 2px 4px #ccc;
+              box-shadow: 0 2px 4px #ccc;
+   }
+
    .header-container {
       -webkit-box-shadow: 0 2px 4px #ddd;
          -moz-box-shadow: 0 2px 4px #ddd;
@@ -248,6 +262,12 @@ table#article-list span.category {
       -webkit-box-shadow: 0 4px 8px #ccc;
          -moz-box-shadow: 0 4px 8px #ccc;
               box-shadow: 0 4px 8px #ccc;
+   }
+
+   nav,
+   header > h1,
+   header > p {
+      margin-left: 90px;
    }
 
    nav li:first-child a {
