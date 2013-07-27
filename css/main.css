@@ -148,17 +148,29 @@ nav ul li.back {
    margin-bottom: 0.8em;
 }
 
-p.image {
+p.image,
+figure.image {
    text-align: center;
    margin: 1.5em 0;
 }
-p.image a {
+p.image a,
+figure.image a {
    border-bottom: none;
 }
-p.image img {
+p.image img,
+figure.image img {
    padding: 0.5em;
-   border: 1px solid #f8f8fa;
+   // border: 1px solid #f8f8fa;
+   border: 1px solid #99a;
    border-radius: 3px;
+   -webkit-box-shadow: 0 4px 8px #aaa;
+      -moz-box-shadow: 0 4px 8px #aaa;
+           box-shadow: 0 4px 8px #aaa;
+}
+figure.image figcaption {
+   margin-top: 0.5em;
+   font-size: 80%;
+   color: #666;
 }
 
 /* ==============
