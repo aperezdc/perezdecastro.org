@@ -265,8 +265,8 @@ table#article-list span.category {
    }
 
    nav,
-   header > h1,
-   header > p {
+   div.header-container header > h1,
+   div.header-container header > p {
       margin-left: 90px;
    }
 
