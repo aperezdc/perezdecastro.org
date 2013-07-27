@@ -12,17 +12,20 @@ N950][] handsets), or just want to add some extra capabilities to
 convert images to grayscale in the image edition mode! So I decided to
 step in and hack on a bit.
 
-**The result**  
+## The result
 Take a close look at the middle screenshot in the image below. Can you
 spot the “Desaturate” tool?
 
-[![Desaturate plugin in action](http://farm7.static.flickr.com/6170/6150764021_743b2401fc.jpg)](http://www.flickr.com/photos/aperezdc/6150764021/in/photostream)
+<figure class="image">
+  [![Desaturate plugin in action](http://farm7.static.flickr.com/6170/6150764021_743b2401fc.jpg)](http://www.flickr.com/photos/aperezdc/6150764021/in/photostream)
+</figure>
 
 That tool is added to the Gallery application by the plugin I have
 implemented. The source code is [available at Gitorious][] and is
 licensed under the LGPLv2. A binary package can be downloaded [here][].
 
-**Tools of the trade**  
+## Tools of the trade
+
 This is what was needed to get the job done:
 
 -   The [MeeGo 2.1 Harmattan SDK][], installed and working.
@@ -32,7 +35,8 @@ This is what was needed to get the job done:
     always nice to get “inspiration” from somewhere ;-)
 -   Some coffee to drink.
 
-**Gallery plugin**  
+## Gallery plugin
+
 The Gallery application in the N9/N950 supports loading the so-called
 “edit plugins”. It will try to load all the `.so` files it finds in
 `/usr/lib/gallery`. Each of those should contain a subclass of
@@ -120,7 +124,8 @@ Gallery allowed to directly manipulate data, a plugin could go against
 the user experience presented by the application allowing to
 destructively edit images.
 
-**Quill filter plugin**  
+## Quill filter plugin
+
 The good thing about having to implement a Quill plugin is the fact
 that any application using `libquillimagefilter` will be able of using
 it. Also, when also using `libquill`, support for infinite undo and redo
@@ -241,7 +246,8 @@ completely unoptimized and naïve (there are for sure algorithms that
 render better quality), works “well enough” and is “fast enough” even
 for huge images.
 
-**Bottom line**  
+## Bottom line
+
 Wrapping up, this is how things work, bottom up:
 
 -   A filter implementation (subclass of
