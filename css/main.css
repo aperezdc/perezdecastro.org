@@ -220,6 +220,12 @@ a:hover {
    border-bottom-color: #8a8;
 }
 
+p.article-date {
+   color: #888;
+   font-size: 90%;
+   margin-top: -1em;
+}
+
 table#article-list td {
    display: block;
 }
@@ -317,6 +323,16 @@ table#article-list span.category {
    table#article-list span.category:before {
       content: "→";
       padding-right: 0.5em;
+   }
+
+   p > img {
+      display: block;
+      float: right;
+      border-radius: 5px;
+      margin: 0.5em 0 0.5em 1.5em;
+      -webkit-box-shadow: 0 4px 8px #aaa;
+         -moz-box-shadow: 0 4px 8px #aaa;
+              box-shadow: 0 4px 8px #aaa;
    }
 
 /* ========================

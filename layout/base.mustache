@@ -62,6 +62,9 @@
                     <header>
 			<h1>{{ title }}</h1>
 			{{# subtitle }}<p>{{ subtitle }}</p>{{/ subtitle }}
+			{{^ is_index }}
+			<p class="article-date">{{ date }}</p>
+			{{/ is_index }}
 		    </header>
 		    {{/ hide_title }}
 
