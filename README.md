@@ -6,6 +6,15 @@ and in the long term term I plan to import selected content from my
 blog](http://blogs.igalia.com/aperez), consolidating all the content
 in a single place.
 
+## License
+
+- Articles (`*.markdown` files) are distributed under [Creative
+  Commons Attribution-NoDerivs license](http://www.tldrlegal.com/license/creative-commons-attribution-noderivs-%28cc-nd%29).
+- Generator code is distributed under the terms of the [MIT
+  license](http://www.tldrlegal.com/license/mit-license).
+- The bundled `classy.js` is distributed under the terms of the [BSD
+  license](http://www.tldrlegal.com/license/bsd-3-clause-license-%28revised%29).
+
 ## The generator
 
 The website is generated using a small tool I cooked myself which
@@ -18,7 +27,7 @@ scripts. The following packages are needed:
 - `glob` - for scanning the file system.
 - `veil` - for loading metadata and content from source files.
 - `highlight.js` - for code syntax highlighting.
-- `classy.js` - for easier OOP.
+- [`classy.js`](http://classy.pocoo.org/) - for easier OOP.
 
 All packages can be installed with `npm`, except for `classy.js`
 which is bundled in the repository.
