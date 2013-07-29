@@ -62,9 +62,9 @@
                     <header>
 			<h1>{{ title }}</h1>
 			{{# subtitle }}<p>{{ subtitle }}</p>{{/ subtitle }}
-			{{^ is_index }}
+			{{^ hide_date }}
 			<p class="article-date">{{ date }}</p>
-			{{/ is_index }}
+			{{/ hide_date }}
 		    </header>
 		    {{/ hide_title }}
 

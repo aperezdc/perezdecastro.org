@@ -187,6 +187,7 @@ var Page = Class.$extend({
 	category  : function () { return this.metadata("category"); },
 	navigation: function () { return this.metadata("navigation"); },
 	hide_title: function () { return this.metadata("hide_title"); },
+	hide_date : function () { return this.metadata("hide_date"); },
 	nocomments: function () { return this.metadata("comments").trim() != "true"; },
 	rfc822date: function () { return this.get_date().toISOString(); },
 	baseurl   : function () { return this.site.baseurl(); },
