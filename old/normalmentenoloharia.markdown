@@ -2,6 +2,7 @@ title: Normalmente no lo haría
 date: 2006-11-30 04:44
 author: Hario
 tags: handmade, lang:es
+category: はりおの階
 
 Normalmente no lo habría hecho; pero aquel día sintió por vez primera
 que no podía seguir guardando para sí aquello que atenazaba su mente
