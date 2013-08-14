@@ -177,6 +177,14 @@ var Page = Class.$extend({
 		return this.metadata("output_suffix", "html");
 	},
 
+	nocomments: function () {
+		var val = this.metadata("comments");
+		if (val === null || val === undefined)
+			return false;
+		console.log(val)
+		return val.trim() != "true";
+	},
+
 	is_index  : function () { return this.slug() == "index"; },
 	content   : function () { return this.get_content("html"); },
 	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
@@ -188,7 +196,6 @@ var Page = Class.$extend({
 	navigation: function () { return this.metadata("navigation"); },
 	hide_title: function () { return this.metadata("hide_title"); },
 	hide_date : function () { return this.metadata("hide_date"); },
-	nocomments: function () { return this.metadata("comments").trim() != "true"; },
 	rfc822date: function () { return this.get_date().toISOString(); },
 	baseurl   : function () { return this.site.baseurl(); },
 	url       : function () { return this.slug() + "." + this.output_suffix(); },
