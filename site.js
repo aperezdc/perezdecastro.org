@@ -226,10 +226,11 @@ var Converter = Class.$extend({
 var Site = Class.$extend({
 	__include__: [MetadataMixin, MetadataJsonMixin],
 
-	__init__: function (path) {
+	__init__: function (path, draft) {
 		this.converter = new Converter();
 		this.basedir = P.normalize(P.resolve(path));
 		this.content = {};
+		this.draft = (draft === undefined) ? false : draft;
 		this._metafile = this.basedir + P.sep + "site.json";
 		this._metadata = null;
 		this._template_cache = {};

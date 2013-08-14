@@ -11,7 +11,9 @@ var S = require("./site.js");
 var P = require("path");
 var F = require("fs");
 
-site = new S.Site(".");
+var draft = (process.argv.length > 2) && (process.argv[2] == "draft");
+
+site = new S.Site(".", draft);
 
 for (var kind in site.content) {
   var items = site.content[kind];
