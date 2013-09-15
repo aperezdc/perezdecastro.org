@@ -54,6 +54,26 @@ var MetadataMixin = {
 	}
 };
 
+var PathAccessorMixin = {
+	traverse: function (path) {
+		if (typeof path == "string") {
+			path = path.split(".");
+		}
+		var current = this;
+		for (var i = 0; i < path.length; i++) {
+			if (typeof current !== "object") {
+				return undefined;
+			}
+			if (typeof current[path[i]] === "function") {
+				current = current[path[i]].apply(current);
+			} else {
+				current = current[path[i]];
+			}
+		}
+		return current;
+	}
+};
+
 var MetadataJsonMixin = {
 	load_metadata: function () {
 		if (typeof(this._metafile) != "undefined") {
@@ -181,7 +201,6 @@ var Page = Class.$extend({
 		var val = this.metadata("comments");
 		if (val === null || val === undefined)
 			return false;
-		console.log(val)
 		return val.trim() != "true";
 	},
 
@@ -231,12 +250,17 @@ var Converter = Class.$extend({
 
 
 var Site = Class.$extend({
-	__include__: [MetadataMixin, MetadataJsonMixin],
+	__include__: [MetadataMixin, MetadataJsonMixin, PathAccessorMixin],
 
 	__init__: function (path, draft) {
 		this.converter = new Converter();
 		this.basedir = P.normalize(P.resolve(path));
-		this.content = {};
+		var self = this;
+		this.content = {
+			tag: function () {
+				return self._content_per_tag();
+			}
+		};
 		this.draft = (draft === undefined) ? false : draft;
 		this._metafile = this.basedir + P.sep + "site.json";
 		this._metadata = null;
@@ -269,6 +293,28 @@ var Site = Class.$extend({
 				});
 			}
 		}
+	},
+
+	_content_per_tag: function () {
+		if (this._per_tag_cache !== undefined)
+			return this._per_tag_cache;
+
+		var cache = {};
+		for (var kind in this.content) {
+			for (var i = 0; i < this.content[kind].length; i++) {
+				var page = this.content[kind][i];
+				var tags = page.tags();
+				for (var j = 0; j < tags.length; j++) {
+					var tag = tags[j];
+					if (cache[tag] === undefined) {
+						cache[tag] = [];
+					}
+					cache[tag].push(page);
+				}
+			}
+		}
+
+		return this._per_tag_cache = cache;
 	},
 
 	get_template: function (name) {
