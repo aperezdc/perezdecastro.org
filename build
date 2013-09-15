@@ -45,11 +45,16 @@ if (feeds) {
             if (data === undefined) {
                 data = [];
             }
-            data.sort(function (a, b) {
+            data = {
+                feed: feed,
+                site: site,
+                items: (data === undefined) ? [] : data,
+            }
+            data.items.sort(function (a, b) {
                 return b.get_date().getTime() - a.get_date().getTime();
             });
             console.log("  feed: " + feed);
-            F.writeFile(feed, M.render(feedtemplate, { site: site, items: data }), function (err) {
+            F.writeFile(feed, M.render(feedtemplate, data), function (err) {
                 if (err) throw err;
             });
         }
