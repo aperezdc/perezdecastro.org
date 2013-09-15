@@ -1,8 +1,7 @@
 Title: List of articles about systemd
 Date: 2012-06-26 20:23
 Author: aperez
-Category: GNOME
-Tags: documentation, gnome, gnomeos, init, systemd
+Tags: gnome, igalia
 
 Even when my personal opinion on [systemd][] is a bit skeptical
 regarding some of [its components][], it is undeniable that in the

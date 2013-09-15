@@ -1,8 +1,7 @@
 Title: Some thoughts (and code) around GObject-Introspection
 Date: 2010-09-06 00:40
 Author: aperez
-Category: Hacking
-Tags: c, gi, gnome, gtk, lua
+Tags: gnome, lua, igalia
 
 There is one single thing that is, in my opinion, generating a fair
 amount of hype and reinvigorated interest in the [GNOME][] platform:

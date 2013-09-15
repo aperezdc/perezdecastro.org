@@ -1,7 +1,7 @@
 Title: Some news, including Bill 0.2 release
 Date: 2009-05-29 02:39
 Author: aperez
-Tags: bash, bill
+Tags: bash, igalia
 
 Time has passed since the latest time I blogged about something, and
 some things have happened, so I think it is a good occasion to write

@@ -1,7 +1,7 @@
 Title: More btrfs goodness: snapshots
 Date: 2008-06-26 00:42
 Author: aperez
-Tags: btrfs, cli
+Tags: btrfs, cli, igalia
 
 As I am currently working with KVM [KVM][] and I will have some big disk
 image files hanging around, I thought it could be a good opportunity to

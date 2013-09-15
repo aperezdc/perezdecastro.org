@@ -1,8 +1,7 @@
 Title: Bill 0.1-2 released
 Date: 2009-01-30 15:28
 Author: aperez
-Category: Bill
-Tags: bash
+Tags: bash, igalia
 
 I have just relased version `0.1-2` of [Bill][], your favourite
 accompaniment for your shell-code meals. Albeit I have plans for an

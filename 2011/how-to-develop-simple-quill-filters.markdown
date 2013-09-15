@@ -1,8 +1,7 @@
 Title: How to develop (simple) Quill filters (and make them available to users)
 Date: 2011-09-21 01:27
 Author: aperez
-Category: Hacking
-Tags: c, meego, plugin, qt, quill
+Tags: qt, igalia
 
 So, you are a developer and want to get your hands dirty coding for the
 for the [Nokia N9][] (and maybe you even got one of those nifty [Nokia

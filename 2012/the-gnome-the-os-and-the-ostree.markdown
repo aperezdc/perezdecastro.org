@@ -1,8 +1,7 @@
 Title: The GNOME, the OS and the OSTree
 Date: 2012-06-15 04:59
 Author: aperez
-Category: GNOME
-Tags: gnome, ostree
+Tags: gnome, igalia
 
 Traditionally, [GNOME][] has been defined —and seen— as a project aiming
 to produce a desktop environment made of Free Software. Maybe you have

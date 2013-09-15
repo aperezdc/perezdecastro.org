@@ -1,8 +1,7 @@
 Title: Meet Bill
 Date: 2008-11-27 03:55
 Author: aperez
-Category: Bill
-Tags: bash
+Tags: bash, igalia
 
 It has been in the oven for some time, but now it is ready for
 release... [Bill][] version 0.1 has just hit the lines!

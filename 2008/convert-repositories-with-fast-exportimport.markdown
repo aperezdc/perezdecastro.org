@@ -1,8 +1,7 @@
 Title: Convert repositories with fast-{export,import}
 Date: 2008-11-20 13:44
 Author: aperez
-Category: Igalia
-Tags: bzr, git, scm
+Tags: bzr, git, scm, igalia
 
 **Update 2010-01-23:** Nowadays the plugin is packaged in Debian
 (package `bzr-fastimport`) and Ubuntu (package `bzr-fastexport`). Once

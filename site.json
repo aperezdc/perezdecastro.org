@@ -6,9 +6,9 @@
 	"baseurl": "http://perezdecastro.org",
 
 	"navigation": [
-		{ "text": "Twitter",  "link": "http://twitter.com/aperezdc" },
-		{ "text": "GitHub",   "link": "https://github.com/aperezdc?tab=repositories" },
-		{ "text": "Photos",   "link": "http://www.flickr.com/photos/aperezdc/" }
+		{ "text": "Twitter", "link": "http://twitter.com/aperezdc" },
+		{ "text": "GitHub",  "link": "https://github.com/aperezdc?tab=repositories" },
+		{ "text": "Photos",  "link": "http://www.flickr.com/photos/aperezdc/" }
 	],
 
 	"@content": {
@@ -16,7 +16,13 @@
 		"articles": ["20*/**/*.markdown"],
 		"oldstuff": ["old/**/*.markdown"]
 	},
+	"@feeds": {
+		"feed.atom"  : "content.articles",
+		"dmon.atom"  : "content.tag.dmon",
+		"igalia.atom": "content.tag.igalia"
+	},
 	"@layout": {
-		"@default": "layout/base.mustache"
+		"@default": "layout/base.mustache",
+		"@feed"   : "layout/atom.mustache"
 	}
 }

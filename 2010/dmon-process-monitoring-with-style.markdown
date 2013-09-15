@@ -1,8 +1,7 @@
 Title: DMon: Process monitoring with style
 Date: 2010-08-27 01:18
 Author: aperez
-Category: Hacking, Systems, Toolchain
-Tags: c, dmon, vfand
+Tags: dmon, igalia
 
 Have you ever wanted to run a lengthy process making sure that it will
 be restarted on failure? Did you need at some point to daemonize a

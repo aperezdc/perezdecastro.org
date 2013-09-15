@@ -1,8 +1,7 @@
 Title: Live is live: How to use Tracker from Qt apps and have your view of the world up to date
 Date: 2011-02-28 02:01
 Author: aperez
-Category: Hacking, Recipes
-Tags: c, qt, qtsparql, tracker
+Tags: qt, tracker, igalia
 
 I have been working lately with the [Qt][] framework and the [Tracker][]
 store. The first thing I noticed once got to know about the current

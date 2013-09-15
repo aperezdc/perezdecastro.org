@@ -1,8 +1,7 @@
 Title: Attending FOSDEM 2012
 Date: 2012-01-29 20:47
 Author: aperez
-Category: Miscellaneous
-Tags: fosdem
+Tags: conferences, igalia
 
 This year I will be attending [FOSDEM][] for the second time, and I am
 really looking forward to it. Not only because my flight from Helsinki

@@ -1,8 +1,7 @@
 Title: Back from FOSDEM —  2013 Edition
 Date: 2013-02-11 23:00
 Author: aperez
-Category: Uncategorized
-Tags: fosdem, webkit, webkitgtk+
+Tags: conferences, webkit, igalia
 
 A couple of weekends ago I attended [FOSDEM][], my third time in a row
 sponsored by [Igalia][].

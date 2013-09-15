@@ -1,8 +1,7 @@
 Title: Python talks Collectd
 Date: 2009-03-22 23:32
 Author: aperez
-Category: Miscellaneous
-Tags: collectd, python
+Tags: python, igalia
 
 I have been playing lately with [collectd][] again, which is a very nice
 piece of software to monitor out things, especially when you want more

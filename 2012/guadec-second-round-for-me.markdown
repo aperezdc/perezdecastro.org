@@ -1,8 +1,7 @@
 Title: GUADEC, second round (for me)
 Date: 2012-07-23 16:48
 Author: aperez
-Category: GNOME
-Tags: conference, gnome, guadec
+Tags: conferences, gnome, igalia
 
 Last summer I had the opportunity of attending the [Desktop Summit][] in
 Berlin, and being it a great experience I was more than looking forward

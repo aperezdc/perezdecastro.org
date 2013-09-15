@@ -1,8 +1,7 @@
 Title: More DebConf 9 adventures
 Date: 2009-08-02 01:40
 Author: aperez
-Category: Miscellaneous
-Tags: debconf
+Tags: conferences, igalia
 
 Now it looks like it is time to complete my [previous post about
 DebConf 9][], after a tiresome journey back from Cáceres to Coruña the

@@ -1,8 +1,7 @@
 Title: Optimizing Qt for MIPS: QString::fromLatin1
 Date: 2013-02-27 15:14
 Author: aperez
-Category: Hacking
-Tags: assembler, benchmark, mips, optimization, qt, strings
+Tags: mips, optimization, qt, strings, igalia
 
 During the last months at [Igalia][] we have been working on optimizing
 open source components for the [MIPS architecture][], using the [SIMD][]

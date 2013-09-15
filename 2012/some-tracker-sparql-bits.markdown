@@ -1,7 +1,7 @@
 Title: Some Tracker + SPARQL bits
 Date: 2012-02-20 18:32
 Author: aperez
-Category: Hacking, Recipes
+Tags: igalia, tracker
 
 Those are some notes about [Tracker][] with links and information which
 has been useful to me when using Tracker as data storage backend in a

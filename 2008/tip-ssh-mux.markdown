@@ -1,8 +1,7 @@
 title: Tip: Faster remote shells with multiplexed SSH
 date: 2008-06-26 19:37
 author: aperez
-category: Toolchain
-tags: ssh
+tags: ssh, igalia
 
 Edit `~/.ssh/config` (or `/etc/ssh/ssh_config` for sitewide
 configuration) and add the following snippet:

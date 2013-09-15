@@ -1,8 +1,7 @@
 Title: ”I am alive” update + going to FOSDEM
 Date: 2011-01-30 17:58
 Author: aperez
-Category: Miscellaneous
-Tags: fosdem
+Tags: conferences, igalia
 
 It's been a long time since I posted an update, and as I am going to
 [FOSDEM][] this year for first time, it looks like now is a good moment

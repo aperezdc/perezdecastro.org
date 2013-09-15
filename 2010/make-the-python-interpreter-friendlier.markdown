@@ -1,8 +1,7 @@
 Title: How to make the Python interpreter friendlier
 Date: 2010-04-15 18:02
 Author: aperez
-Category: Miscellaneous, Recipes
-Tags: cli, python
+Tags: python, igalia
 
 We are doing quite some coding in [Python][] lately (well, and [also at
 spare time][]), and it is always nice to have the possibility of having
