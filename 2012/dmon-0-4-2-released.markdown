@@ -1,7 +1,7 @@
 Title: DMon 0.4.2 “Three Wise Men” released
 Date: 2012-01-07 22:13
 Author: aperez
-Tags: dmon, igalia
+Tags: dmon, igalia, connectical
 
 Don't expect lots of surprises this time, but an otherwise smooth
 maintenance release that includes a couple of minor niceties. Changes

@@ -1,7 +1,7 @@
 Title: Factor out your Apache-fu with mod_macro
 Date: 2009-10-19 13:23
 Author: aperez
-Tags: apache, igalia
+Tags: apache, igalia, connectical
 
 For nearly all HTTP-serving related work, our software of choice is the
 [Apache][] web server. Lately, we have been moving some old setups which

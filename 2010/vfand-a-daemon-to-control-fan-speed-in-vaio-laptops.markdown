@@ -1,7 +1,7 @@
 Title: vfand: A daemon to control fan speed in Vaio laptops
 Date: 2010-07-27 20:45
 Author: aperez
-Tags: vfand, igalia
+Tags: vfand, igalia, connectical
 
 Today I got tired of getting frequent lock-ups in my laptop, a [Vaio
 TZ11MN/N][] which has been serving me just fine the during the past

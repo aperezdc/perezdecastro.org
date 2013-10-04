@@ -1,7 +1,7 @@
 Title: DMon status report: evolution to 0.3.7
 Date: 2010-10-04 18:06
 Author: aperez
-Tags: dmon, igalia
+Tags: dmon, igalia, connectical
 
 When I [first wrote about DMon][], I pointed out that version 0.3 could
 be already installed from [our APT repository][], which hosts flavours

@@ -1,7 +1,7 @@
 Title: First day at the DebConf 9
 Date: 2009-07-27 02:19
 Author: aperez
-Tags: conference, igalia
+Tags: conference, igalia, connectical
 
 I arrived yesterday at the main venue after a the long trip by car:
 \~700km in a car *without* air conditioning. I was very tired so I

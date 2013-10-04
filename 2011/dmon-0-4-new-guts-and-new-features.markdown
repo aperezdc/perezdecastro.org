@@ -1,7 +1,7 @@
 Title: DMon 0.4: New guts & new features
 Date: 2011-07-25 11:50
 Author: aperez
-Tags: dmon, igalia
+Tags: dmon, igalia, connectical
 
 Wow, that was a lot of time without me posting anything (five months),
 mostly because I am investing most of my spare time after work here in

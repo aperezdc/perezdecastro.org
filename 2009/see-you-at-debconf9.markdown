@@ -1,7 +1,7 @@
 Title: See you at DebConf 9
 Date: 2009-07-24 18:01
 Author: aperez
-Tags: conferences, igalia
+Tags: conferences, igalia, connectical
 
 <p class="image">
   [![DebConf9 Logo](http://blogs.igalia.com/aperez/files/2009/07/dc9logo.png)](http://debconf9.debconf.org/)

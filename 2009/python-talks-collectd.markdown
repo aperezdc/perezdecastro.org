@@ -1,7 +1,7 @@
 Title: Python talks Collectd
 Date: 2009-03-22 23:32
 Author: aperez
-Tags: python, igalia
+Tags: python, igalia, connectical
 
 I have been playing lately with [collectd][] again, which is a very nice
 piece of software to monitor out things, especially when you want more

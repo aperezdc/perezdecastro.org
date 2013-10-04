@@ -1,7 +1,7 @@
 Title: Python recipe: Functional config file parsing
 Date: 2009-12-12 04:17
 Author: aperez
-Tags: python, igalia
+Tags: python, igalia, connectical
 
 Sometimes one has to parse programmatically some file containing
 `key=value` pairs. In the world of systems administration this means
