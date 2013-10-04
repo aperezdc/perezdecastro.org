@@ -18,6 +18,7 @@
 	</generator>
 
 	{{# items }}
+	{{^ hidden }}
 	<entry>
 		<title type="html">{{ title }}</title>
 		<id>{{{ fullurl }}}</id>
@@ -32,5 +33,6 @@
 		</author>
 		{{/ author }}
 	</entry>
+	{{/ hidden }}
 	{{/ items }}
 </feed>

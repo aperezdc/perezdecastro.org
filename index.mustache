@@ -7,10 +7,12 @@ sidebar: sidebar/index.markdown
 <table id="article-list">
 	<tbody>
 	{{# content.articles }}
+	  {{^ hidden }}
 		<tr>
 			<td class="date">{{ date }}</td>
 			<td><a href="/{{{ url }}}">{{ title }}</a></td>
 		</tr>
+		{{/ hidden }}
 	{{/ content.articles }}
 </dl>
 {{/ site }}

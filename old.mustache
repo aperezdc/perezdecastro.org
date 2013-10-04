@@ -7,6 +7,7 @@ sidebar: sidebar/oldstuff.markdown
 <table id="article-list">
 	<tbody>
 	{{# content.oldstuff }}
+		{{^ hidden }}
 		<tr>
 			<td class="date">{{ date }}</td>
 			<td>
@@ -16,6 +17,7 @@ sidebar: sidebar/oldstuff.markdown
 				{{/ category }}
 			</td>
 		</tr>
+		{{/ hidden }}
 	{{/ content.oldstuff }}
 </dl>
 {{/ site }}

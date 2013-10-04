@@ -96,6 +96,7 @@ var Page = Class.$extend({
 
 	__init__: function (site, path) {
 		this.site = site;
+		this.hidden = false;
 		this._tags = null;
 		this._date = null;
 		this._slug = null;
@@ -124,7 +125,7 @@ var Page = Class.$extend({
 				try {
 					this._date = new Date(datestring);
 				} catch (e) {
-					// Do nothing, will pickl date from filesystem below.
+					// Do nothing, will pick date from filesystem below.
 				}
 			}
 			if (this._date === null) {
@@ -284,9 +285,8 @@ var Site = Class.$extend({
 				for (var j = 0; j < files.length; j++) {
 					var page = new Page(this, files[j]);
 					// Filter elements which are to be published in the future.
-					if (page.get_date() <= this._build_date) {
-						this.content[kind][this.content[kind].length] = page;
-					}
+					page.hidden = (page.get_date() > this._build_date);
+					this.content[kind][this.content[kind].length] = page;
 				}
 				this.content[kind].sort(function (a, b) {
 					return b.get_date().getTime() - a.get_date().getTime();
