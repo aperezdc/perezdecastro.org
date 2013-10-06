@@ -64,6 +64,10 @@ body {
     font: 16px/26px Raleway, sans-serif;
 }
 
+p, li, dd {
+	text-align: justify;
+}
+
 code,
 pre {
    font-family: "Source Code Pro", monospace;
