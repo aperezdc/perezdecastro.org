@@ -5,12 +5,12 @@
  * Distributed under terms of the MIT license.
  */
 
-require("./classy");
 var F = require("fs");
 var V = require("veil").defaults({ keys: "underscore" });
 var P = require("path");
 var G = require("glob");
 var M = require("mustache");
+var C = require("fishbone");
 var H = require("highlight.js");
 var marked = require("marked");
 
@@ -21,7 +21,46 @@ marked.setOptions({
 });
 
 
-var RenderMixin = {
+var MetadataBase = C({
+	metadata: function (name, default_value) {
+		if (this._metadata === null) {
+			this._metadata = this.getMetadata();
+		}
+		if (name === undefined) {
+			return this._metadata;
+		} else if (typeof(this._metadata[name]) != "undefined") {
+			return this._metadata[name];
+		} else if (default_value !== undefined) {
+			return default_value;
+		} else {
+			return null;
+		}
+	},
+
+	getMetadata: function () {
+		return this;
+	},
+});
+
+
+var MONTHS = ["January", "February", "March", "April", "May", "June",
+	"July", "August", "September", "October", "November", "December"];
+
+
+var Page = MetadataBase.extend({
+
+	init: function (site, path) {
+		this.site = site;
+		this.hidden = false;
+		this._tags = null;
+		this._date = null;
+		this._slug = null;
+		this._sidebar = null;
+		this._path = P.normalize(P.resolve(path));
+		this._suffix = P.extname(this._path);
+		this._metadata = null;
+	},
+
 	render: function () {
 		var template = this.template();
 
@@ -36,81 +75,14 @@ var RenderMixin = {
 		if (!render_data)
 			throw "No data to render";
 		return M.render(template, render_data);
-	}
-};
-
-var MetadataMixin = {
-	metadata: function (name, default_value) {
-		if (this._metadata === null) {
-			this._metadata = this.load_metadata();
-		}
-		if (!name) {
-			return this._metadata;
-		} else if (typeof(this._metadata[name]) != "undefined") {
-			return this._metadata[name];
-		} else {
-			return default_value;
-		}
-	}
-};
-
-var PathAccessorMixin = {
-	traverse: function (path) {
-		if (typeof path == "string") {
-			path = path.split(".");
-		}
-		var current = this;
-		for (var i = 0; i < path.length; i++) {
-			if (typeof current !== "object") {
-				return undefined;
-			}
-			if (typeof current[path[i]] === "function") {
-				current = current[path[i]].apply(current);
-			} else {
-				current = current[path[i]];
-			}
-		}
-		return current;
-	}
-};
-
-var MetadataJsonMixin = {
-	load_metadata: function () {
-		if (typeof(this._metafile) != "undefined") {
-			return require(this._metafile);
-		}
-		if (typeof(this.$class.metafile) != "undefined") {
-			return require(P.normalize(P.resolve(this.$class.metafile)));
-		}
-		throw "No metafile defined";
-	}
-};
-
-
-var MONTHS = ["January", "February", "March", "April", "May", "June",
-	"July", "August", "September", "October", "November", "December"];
-
-
-var Page = Class.$extend({
-	__include__: [MetadataMixin, RenderMixin],
-
-	__init__: function (site, path) {
-		this.site = site;
-		this.hidden = false;
-		this._tags = null;
-		this._date = null;
-		this._slug = null;
-		this._sidebar = null;
-		this._path = P.normalize(P.resolve(path));
-		this._suffix = P.extname(this._path);
-		this._metadata = null;
 	},
 
-	load_metadata: function () {
+	// Override MetadataBase.getMetadata()
+	getMetadata: function () {
 		return V.parse(F.readFileSync(this._path, { encoding: "utf-8" }));
 	},
 
-	get_content: function (format) {
+	getContent: function (format) {
 		var vname = "$content_" + format;
 		if (!this[vname]) {
 			this[vname] = this.site.convert(this._path, format, this);
@@ -118,7 +90,7 @@ var Page = Class.$extend({
 		return this[vname];
 	},
 
-	get_date: function () {
+	getDate: function () {
 		if (this._date === null) {
 			var datestring = this.metadata("date");
 			if (datestring) {
@@ -136,7 +108,7 @@ var Page = Class.$extend({
 	},
 
 	date: function () {
-		var d = this.get_date();
+		var d = this.getDate();
 		return (d.getDate() + " " +
 				MONTHS[d.getMonth()] + " " +
 				d.getFullYear());
@@ -173,10 +145,10 @@ var Page = Class.$extend({
 	},
 
 	sidebar: function () {
-		if (!this._sidebar) {
+		if (this._sidebar === null) {
 			var sidebar = this.metadata("sidebar");
 			if (sidebar) {
-				this._sidebar = this.site.get_sidebar(sidebar);
+				this._sidebar = this.site.getSidebar(sidebar);
 			} else {
 				this._sidebar = false;
 			}
@@ -206,9 +178,9 @@ var Page = Class.$extend({
 	},
 
 	is_index  : function () { return this.slug() == "index"; },
-	content   : function () { return this.get_content("html"); },
+	content   : function () { return this.getContent("html"); },
 	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
-	template  : function () { return this.site.get_template(this.metadata("layout", "page")); },
+	template  : function () { return this.site.getTemplate(this.metadata("layout", "page")); },
 	body      : function () { return this.metadata("body"); },
 	title     : function () { return this.metadata("title"); },
 	subtitle  : function () { return this.metadata("subtitle"); },
@@ -216,7 +188,7 @@ var Page = Class.$extend({
 	navigation: function () { return this.metadata("navigation"); },
 	hide_title: function () { return this.metadata("hide_title"); },
 	hide_date : function () { return this.metadata("hide_date"); },
-	rfc822date: function () { return this.get_date().toISOString(); },
+	rfc822date: function () { return this.getDate().toISOString(); },
 	baseurl   : function () { return this.site.baseurl(); },
 	url       : function () { return this.slug() + "." + this.output_suffix(); },
 	fullurl   : function () { return this.baseurl() + "/" + this.url(); },
@@ -224,8 +196,8 @@ var Page = Class.$extend({
 exports.Page = Page;
 
 
-var Converter = Class.$extend({
-	__init__: function () {
+var Converter = C({
+	init: function () {
 		this.add("markdown", "html", function (data, extra) { return marked(data); });
 		this.add("mustache", "html", function (data, extra) { return M.render(data, extra); });
 	},
@@ -250,16 +222,14 @@ var Converter = Class.$extend({
 });
 
 
-var Site = Class.$extend({
-	__include__: [MetadataMixin, MetadataJsonMixin, PathAccessorMixin],
-
-	__init__: function (path, draft) {
+var Site = MetadataBase.extend({
+	init: function (path, draft) {
 		this.converter = new Converter();
 		this.basedir = P.normalize(P.resolve(path));
 		var self = this;
 		this.content = {
 			tag: function () {
-				return self._content_per_tag();
+				return self._getTagSortedContent();
 			}
 		};
 		this.draft = (draft === undefined) ? false : draft;
@@ -268,10 +238,10 @@ var Site = Class.$extend({
 		this._template_cache = {};
 		this._sidebar_cache = {};
 		this._build_date = new Date();
-		this._load_content(); // Must be the last thing done
+		this._loadContent(); // Must be the last thing done
 	},
 
-	_load_content: function () {
+	_loadContent: function () {
 		var content = this.metadata("@content");
 		if (!content) content = { "pages": ["*.markdown", "*.mustache"] };
 		for (var kind in content) {
@@ -285,17 +255,21 @@ var Site = Class.$extend({
 				for (var j = 0; j < files.length; j++) {
 					var page = new Page(this, files[j]);
 					// Filter elements which are to be published in the future.
-					page.hidden = (page.get_date() > this._build_date);
+					page.hidden = (page.getDate() > this._build_date);
 					this.content[kind][this.content[kind].length] = page;
 				}
 				this.content[kind].sort(function (a, b) {
-					return b.get_date().getTime() - a.get_date().getTime();
+					return b.getDate().getTime() - a.getDate().getTime();
 				});
 			}
 		}
 	},
 
-	_content_per_tag: function () {
+	getMetadata: function () {
+		return require(this._metafile);
+	},
+
+	_getTagSortedContent: function () {
 		if (this._per_tag_cache !== undefined)
 			return this._per_tag_cache;
 
@@ -317,7 +291,7 @@ var Site = Class.$extend({
 		return this._per_tag_cache = cache;
 	},
 
-	get_template: function (name) {
+	getTemplate: function (name) {
 		if (name == "-")
 			return null;
 
@@ -337,7 +311,8 @@ var Site = Class.$extend({
 		return this._template_cache[name];
 	},
 
-	get_sidebar: function (relpath) {
+	getSidebar: function (relpath) {
+		console.log("XXX:", relpath);
 		if (this._sidebar_cache[relpath] === undefined) {
 			if (F.statSync(this.basedir + "/" + relpath)) {
 				this._sidebar_cache[relpath] = new Page(this, relpath);
@@ -350,6 +325,24 @@ var Site = Class.$extend({
 
 	convert: function (path, to, data) {
 		return this.converter.convert(P.extname(path), to, data.body(), data);
+	},
+
+	traverse: function (path) {
+		if (typeof path == "string") {
+			path = path.split(".");
+		}
+		var current = this;
+		for (var i = 0; i < path.length; i++) {
+			if (typeof current !== "object") {
+				return undefined;
+			}
+			if (typeof current[path[i]] === "function") {
+				current = current[path[i]].apply(current);
+			} else {
+				current = current[path[i]];
+			}
+		}
+		return current;
 	},
 
 	rfc822date: function () {

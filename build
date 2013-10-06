@@ -35,7 +35,7 @@ for (var kind in site.content) {
 
 var feeds = site.metadata("@feeds");
 if (feeds) {
-    var feedtemplate = site.get_template("@feed");
+    var feedtemplate = site.getTemplate("@feed");
     if (!feedtemplate) {
         console.error("No @feed template @layout defined in site.json");
     } else {
@@ -51,7 +51,7 @@ if (feeds) {
                 items: (data === undefined) ? [] : data,
             }
             data.items.sort(function (a, b) {
-                return b.get_date().getTime() - a.get_date().getTime();
+                return b.getDate().getTime() - a.getDate().getTime();
             });
             console.log("  feed: " + feed);
             F.writeFile(feed, M.render(feedtemplate, data), function (err) {
