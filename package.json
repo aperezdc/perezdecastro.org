@@ -1,0 +1,23 @@
+{
+	"name": "perezdecastro.org",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/aperezdc/perezdecastro.org.git"
+	},
+	"author": {
+		"name": "Adrian Perez de Castro",
+		"email": "adrian@perezdecastro.org",
+		"url": "http://perezdecastro.org"
+	},
+	"homepage": "http://github.com/aperezdc/perezdecastro.org",
+	"description": "Static website generator (and content) for perezdecastro.org",
+	"dependencies": {
+		"fishbone"    : "~1.0.1",
+		"glob"        : "~3.2.6",
+		"highlight.js": "~7.3.0",
+		"marked"      : "~0.2.9",
+		"mustache"    : "~0.7.2",
+		"veil"        : "~0.1.0"
+	}
+}
