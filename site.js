@@ -23,13 +23,14 @@ marked.setOptions({
 
 var MetadataBase = C({
 	metadata: function (name, default_value) {
-		if (this._metadata === null) {
-			this._metadata = this.getMetadata();
+		var meta = this.getMetadata();
+		if (meta === null) {
+			meta = this;
 		}
 		if (name === undefined) {
-			return this._metadata;
-		} else if (typeof(this._metadata[name]) != "undefined") {
-			return this._metadata[name];
+			return meta;
+		} else if (typeof(meta[name]) != "undefined") {
+			return meta[name];
 		} else if (default_value !== undefined) {
 			return default_value;
 		} else {
@@ -79,7 +80,10 @@ var Page = MetadataBase.extend({
 
 	// Override MetadataBase.getMetadata()
 	getMetadata: function () {
-		return V.parse(F.readFileSync(this._path, { encoding: "utf-8" }));
+		if (this._metadata === null) {
+			this._metadata = V.parse(F.readFileSync(this._path, { encoding: "utf-8" }));
+		}
+		return this._metadata;
 	},
 
 	getContent: function (format) {
@@ -185,7 +189,6 @@ var Page = MetadataBase.extend({
 	title     : function () { return this.metadata("title"); },
 	subtitle  : function () { return this.metadata("subtitle"); },
 	category  : function () { return this.metadata("category"); },
-	navigation: function () { return this.metadata("navigation"); },
 	hide_title: function () { return this.metadata("hide_title"); },
 	hide_date : function () { return this.metadata("hide_date"); },
 	rfc822date: function () { return this.getDate().toISOString(); },
@@ -266,7 +269,10 @@ var Site = MetadataBase.extend({
 	},
 
 	getMetadata: function () {
-		return require(this._metafile);
+		if (this._metadata === null) {
+			this._metadata = require(this._metafile);
+		}
+		return this._metadata;
 	},
 
 	_getTagSortedContent: function () {
@@ -312,7 +318,6 @@ var Site = MetadataBase.extend({
 	},
 
 	getSidebar: function (relpath) {
-		console.log("XXX:", relpath);
 		if (this._sidebar_cache[relpath] === undefined) {
 			if (F.statSync(this.basedir + "/" + relpath)) {
 				this._sidebar_cache[relpath] = new Page(this, relpath);
@@ -353,6 +358,7 @@ var Site = MetadataBase.extend({
 	author: function () { return this.metadata("author"); },
 	tagline: function () { return this.metadata("tagline"); },
 	baseurl: function () { return this.metadata("baseurl"); },
+	navigation: function () { return this.metadata("navigation"); },
 	author_email: function () { return this.metadata("author_email"); },
 });
 exports.Site = Site;
