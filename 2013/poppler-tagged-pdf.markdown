@@ -104,7 +104,7 @@ tool has been updated and can now be used to print out the structure tree
 (flag: `-struct`) or the tree plus the text contained in the elements
 (flag: `-struct-text`). It looks like this when used with the [FW-4 US
 tax form](http://www.irs.gov/pub/irs-pdf/fw4.pdf) (the [actual
-output](fw4-struct-text.txt) is much longer):
+output](/2013/fw4-struct-text.txt) is much longer):
 
 ```
 % pdfinfo -struct fw4.pdf | tail -n + 22
@@ -129,7 +129,7 @@ In order to test the implementation, I have written the `pdfstructutohtml`
 tool, which uses the structure tree to convert PDFs to HTML, trying to
 keep the logical structure. The output for the FW-4 form has a number of
 flaws because the program is simple and could use some improvements, but
-the [generated HTML](fw4-pdfstruct.html) source contains the structure
+the [generated HTML](/2013/fw4-pdfstruct.html) source contains the structure
 and basic styling, properly converted from the original document: not
 bad for a ~500 line program!
 
@@ -191,7 +191,7 @@ Here you can see the new pane in the `poppler-glib-demo` tool, which
 shows the document structure tree:
 
 <figure class="image">
-  ![FW-4 in poppler-glib-demo](fw4-glib-demo.png)
+  ![FW-4 in poppler-glib-demo](/2013/fw4-glib-demo.png)
   <figcaption>FW-4 in `poppler-glib-demo`</figcaption>
 </figure>
 
