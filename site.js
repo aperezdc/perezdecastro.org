@@ -190,7 +190,7 @@ var Page = MetadataBase.extend({
 
 	is_index  : function () { return this.slug() == "index"; },
 	content   : function () { return this.getContent("html"); },
-	relpath   : function () { return this._path.slice(site.basedir.length + 1); },
+	relpath   : function () { return this._path.slice(this.site.basedir.length + 1); },
 	template  : function () { return this.site.getTemplate(this.metadata("layout", "page")); },
 	body      : function () { return this.metadata("body"); },
 	title     : function () { return this.metadata("title"); },
