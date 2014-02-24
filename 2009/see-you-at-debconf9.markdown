@@ -4,7 +4,7 @@ Author: aperez
 Tags: conferences, igalia, connectical
 
 <p class="image">
-  [![DebConf9 Logo](http://blogs.igalia.com/aperez/files/2009/07/dc9logo.png)](http://debconf9.debconf.org/)
+  [![DebConf9 Logo](dc9logo.png)](http://debconf9.debconf.org/)
 </p>
 
 I will pick up my car and embark myself into a
