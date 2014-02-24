@@ -121,8 +121,12 @@ var Page = MetadataBase.extend({
 				d.getFullYear());
 	},
 
-	file_rfc822date: function () {
+	file_isodate: function () {
 		return F.statSync(this._path).mtime.toISOString();
+	},
+
+	file_rfc822date: function () {
+		return F.statSync(this._path).mtime.toUTCString();
 	},
 
 	slug: function () {
@@ -194,7 +198,8 @@ var Page = MetadataBase.extend({
 	category  : function () { return this.metadata("category"); },
 	hide_title: function () { return this.metadata("hide_title"); },
 	hide_date : function () { return this.metadata("hide_date"); },
-	rfc822date: function () { return this.getDate().toISOString(); },
+	isodate   : function () { return this.getDate().toISOString(); },
+	rfc822date: function () { return this.getDate().toUTCString(); },
 	baseurl   : function () { return this.site.baseurl(); },
 	url       : function () { return this.slug() + "." + this.output_suffix(); },
 	fullurl   : function () { return this.baseurl() + "/" + this.url(); },
@@ -357,14 +362,12 @@ var Site = MetadataBase.extend({
 		return current;
 	},
 
-	rfc822date: function () {
-		return this._build_date.toISOString();
-	},
-
 	title: function () { return this.metadata("title"); },
 	author: function () { return this.metadata("author"); },
 	tagline: function () { return this.metadata("tagline"); },
 	baseurl: function () { return this.metadata("baseurl"); },
+	isodate: function () { return this._build_date.toISOString(); },
+	rfc822date: function () { return this._build_date.toUTCString(); },
 	navigation: function () { return this.metadata("navigation"); },
 	author_email: function () { return this.metadata("author_email"); },
 });

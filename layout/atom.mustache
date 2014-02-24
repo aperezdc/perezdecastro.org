@@ -6,7 +6,7 @@
 	<link href="{{{ baseurl }}}/{{{ feed }}}" rel="self"/>
 	<link href="{{{ baseurl }}}/" />
 	<id>{{{ baseurl }}}/{{{ feed }}}</id>
-	<updated>{{ rfc822date }}</updated>
+	<updated>{{ isodate }}</updated>
 	<author>
 		{{# author }}<name>{{ author }}</name>{{/ author }}
 		{{# author_email }}<email>{{ author_email }}</email>{{/ author_email }}
@@ -22,7 +22,7 @@
 	<entry>
 		<title type="html">{{ title }}</title>
 		<id>{{{ fullurl }}}</id>
-		<updated>{{ rfc822date }}</updated>
+		<updated>{{ isodate }}</updated>
 		<link rel="alternate" type="text/html" href="{{{ fullurl }}}" />
 		<content type="html">{{ content }}</content>
 		{{# author }}
