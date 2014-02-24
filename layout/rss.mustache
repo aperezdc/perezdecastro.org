@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0"
+		xmlns:atom="http://www.w3.org/2005/Atom"
+		xmlns:content="http://purl.org/rss/1.0/modules/content/">
 	<channel>
 		{{# site }}
 		<title>{{ title }}</title>
 		{{# tagline }}<description>{{ tagline }}</description>{{/ tagline }}
 		<link>{{ baseurl }}</link>
+		<atom:link rel="self" href="{{{ baseurl }}}/{{{ feed }}}" />
 		<lastBuildDate>{{ rfc822date }}</lastBuildDate>
 		<pubDate>{{ rfc822date }}</pubDate>
 		{{# author_email }}
-		<webMaster>{{ author_email }}</webMaster>
-		<managingEditor>{{ author_email }}</managingEditor>
+		<webMaster>{{ author_email }}{{# author }} ({{ author }}){{/ author }}</webMaster>
+		<managingEditor>{{ author_email }}{{# author }} ({{ author }}){{/ author }}</managingEditor>
 		{{/ author_email }}
 		{{/ site }}
 		<ttl>1800</ttl>
@@ -22,6 +25,7 @@
 			<guid>{{{ fullurl }}}</guid>
 			<pubDate>{{ rfc822date }}</pubDate>
 			<description>{{ content }}</description>
+			<content:encoded><![CDATA[{{{ content }}}]]></content:encoded>
 		</item>
 		{{/ hidden }}
 		{{/ items }}
