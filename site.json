@@ -17,13 +17,15 @@
 		"oldstuff": ["old/**/*.markdown"]
 	},
 	"@feeds": {
-		"feed.atom"       : "content.articles",
-		"dmon.atom"       : "content.tag.dmon",
-		"igalia.atom"     : "content.tag.igalia",
-		"connectical.atom": "content.tag.connectical"
+		"%"            : ["atom", "rss"],
+		"feed.%"       : "content.articles",
+		"dmon.%"       : "content.tag.dmon",
+		"igalia.%"     : "content.tag.igalia",
+		"connectical.%": "content.tag.connectical"
 	},
 	"@layout": {
-		"@default": "layout/base.mustache",
-		"@feed"   : "layout/atom.mustache"
+		"@default"  : "layout/base.mustache",
+		"@feed.atom": "layout/atom.mustache",
+		"@feed.rss" : "layout/rss.mustache"
 	}
 }

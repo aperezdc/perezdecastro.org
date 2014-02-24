@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		{{# site }}
+		<title>{{ title }}</title>
+		{{# tagline }}<description>{{ tagline }}</description>{{/ tagline }}
+		<link>{{ baseurl }}</link>
+		<lastBuildDate>{{ rfc822date }}</lastBuildDate>
+		<pubDate>{{ rfc822date }}</pubDate>
+		{{# author_email }}
+		<webMaster>{{ author_email }}</webMaster>
+		<managingEditor>{{ author_email }}</managingEditor>
+		{{/ author_email }}
+		{{/ site }}
+		<ttl>1800</ttl>
+
+		{{# items }}
+		{{^ hidden }}
+		<item>
+			<title>{{ title }}</title>
+			<link>{{ fullurl }}</link>
+			<guid>{{{ fullurl }}}</guid>
+			<pubDate>{{ rfc822date }}</pubDate>
+			<description>{{ content }}</description>
+		</item>
+		{{/ hidden }}
+		{{/ items }}
+	</channel>
+</rss>

@@ -35,29 +35,36 @@ for (var kind in site.content) {
 
 var feeds = site.metadata("@feeds");
 if (feeds) {
-    var feedtemplate = site.getTemplate("@feed");
-    if (!feedtemplate) {
-        console.error("No @feed template @layout defined in site.json");
-    } else {
-        console.log("Building “@feeds”:");
-        for (var feed in feeds) {
-            var data = site.traverse(feeds[feed]);
-            if (data === undefined) {
-                data = [];
-            }
-            data = {
-                feed: feed,
-                site: site,
-                items: (data === undefined) ? [] : data,
-            }
-            data.items.sort(function (a, b) {
-                return b.getDate().getTime() - a.getDate().getTime();
-            });
-            console.log("  feed: " + feed);
-            F.writeFile(feed, M.render(feedtemplate, data), function (err) {
-                if (err) throw err;
-            });
-        }
-    }
+    var formats = feeds["%"];
+	if (formats === undefined)
+		formats = ["atom"];
+
+	for (var i = 0; i < formats.length; i++) {
+		var format = formats[i];
+		var feedtemplate = site.getTemplate("@feed." + format);
+		if (!feedtemplate) {
+			console.error("No @feed." + format + " template @layout defined in site.json");
+		} else {
+			console.log("Building “@feeds” (" + format + "):");
+			for (var feed in feeds) {
+				if (feed === "%")
+					continue;
+				var data = site.traverse(feeds[feed]);
+				feed = feed.replace("%", format);
+				data = {
+					feed: feed,
+					site: site,
+					items: (data === undefined) ? [] : data,
+				};
+				data.items.sort(function (a, b) {
+					return b.getDate().getTime() - a.getDate().getTime();
+				});
+				console.log("  feed: " + feed);
+				F.writeFile(feed, M.render(feedtemplate, data), function (err) {
+					if (err) throw err;
+				});
+			}
+		}
+	}
 }
 

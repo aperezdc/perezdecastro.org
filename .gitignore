@@ -7,3 +7,7 @@ feed.atom
 dmon.atom
 igalia.atom
 connectical.atom
+feed.rss
+dmon.rss
+igalia.rss
+connectical.rss
