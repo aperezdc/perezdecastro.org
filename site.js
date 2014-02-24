@@ -48,21 +48,6 @@ var MetadataBase = C({
 });
 
 
-var MarkedFeedRenderer = C(marked.Renderer).extend({
-	init: function (baseurl) {
-		this._baseurl = baseurl;
-	},
-
-	link: function (href, title, text) {
-		return this.__link(U.resolve(this._baseurl, href), title, text);
-	},
-
-	image: function (href, title, text) {
-		return this.__image(U.resolve(this._baseurl, href), title, text);
-	},
-});
-
-
 var MONTHS = ["January", "February", "March", "April", "May", "June",
 	"July", "August", "September", "October", "November", "December"];
 
