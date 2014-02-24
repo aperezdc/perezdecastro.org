@@ -1,9 +1,12 @@
+/* jslint node:true */
 /*
  * site.js
  * Copyright (C) 2013 Adrian Perez <aperez@igalia.com>
  *
  * Distributed under terms of the MIT license.
  */
+
+"use strict";
 
 var F = require("fs");
 var V = require("veil").defaults({ keys: "underscore" });
@@ -67,7 +70,7 @@ var Page = MetadataBase.extend({
 
 		// Use the own contents as template
 		if (template === null)
-			template = this.body()
+			template = this.body();
 
 		var render_data = this;
 		if (typeof(this.render_data) == "function")
@@ -298,7 +301,7 @@ var Site = MetadataBase.extend({
 			}
 		}
 
-		return this._per_tag_cache = cache;
+		return (this._per_tag_cache = cache);
 	},
 
 	getTemplate: function (name) {
@@ -309,7 +312,7 @@ var Site = MetadataBase.extend({
 		if (!layout)
 			throw "No layout templates defined";
 		
-		var name = layout[name];
+		name = layout[name];
 		if (!name) name = layout["@default"];
 		if (!name) name = "default.mustache";
 

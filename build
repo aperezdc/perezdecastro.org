@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+/* jslint node:true */
 /* vim: ft=javascript shiftwidth=4 tabstop=4
  *
  * build.js
@@ -7,14 +8,14 @@
  * Distributed under terms of the MIT license.
  */
 
+"use strict";
+
 var S = require("./site.js");
 var M = require("mustache");
-var P = require("path");
 var F = require("fs");
 
-var draft = (process.argv.length > 2) && (process.argv[2] == "draft");
-
-site = new S.Site(".", draft);
+var draft = (process.argv.length > 2) && (process.argv[2] === "draft");
+var site = new S.Site(".", draft);
 
 for (var kind in site.content) {
     var items = site.content[kind];
