@@ -56,9 +56,7 @@ if (feeds) {
 					site: site,
 					items: (data === undefined) ? [] : data,
 				};
-				data.items.sort(function (a, b) {
-					return b.getDate().getTime() - a.getDate().getTime();
-				});
+				data.items.sort(site.sortPostsByDate);
 				console.log("  feed: " + feed);
 				F.writeFile(feed, M.render(feedtemplate, data), function (err) {
 					if (err) throw err;

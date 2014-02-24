@@ -225,6 +225,12 @@ var Converter = C({
 });
 
 
+function sortPostsByDate(a, b) {
+	return b.getDate().getTime() - a.getDate().getTime();
+}
+exports.sortPostsByDate = sortPostsByDate;
+
+
 var Site = MetadataBase.extend({
 	init: function (path, draft) {
 		this.converter = new Converter();
@@ -261,9 +267,7 @@ var Site = MetadataBase.extend({
 					page.hidden = (page.getDate() > this._build_date);
 					this.content[kind][this.content[kind].length] = page;
 				}
-				this.content[kind].sort(function (a, b) {
-					return b.getDate().getTime() - a.getDate().getTime();
-				});
+				this.content[kind].sort(sortPostsByDate);
 			}
 		}
 	},
