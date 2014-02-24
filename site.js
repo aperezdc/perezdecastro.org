@@ -33,7 +33,7 @@ var MetadataBase = C({
 		}
 		if (name === undefined) {
 			return meta;
-		} else if (typeof(meta[name]) != "undefined") {
+		} else if (typeof(meta[name]) !== "undefined") {
 			return meta[name];
 		} else if (default_value !== undefined) {
 			return default_value;
@@ -89,7 +89,7 @@ var Page = MetadataBase.extend({
 			template = this.body();
 
 		var render_data = this;
-		if (typeof(this.render_data) == "function")
+		if (typeof(this.render_data) === "function")
 			render_data = this.render_data();
 
 		if (!render_data)
@@ -248,7 +248,7 @@ var Converter = C({
 
 	add: function (from, to, func) {
 		var fname = "$convert_." + from + "_$to_." + to;
-		if (typeof(this[fname]) == "function") {
+		if (typeof(this[fname]) === "function") {
 			throw "Converter " + from + "→" + to + " is already defined";
 		} else {
 			this[fname] = func;
@@ -257,7 +257,7 @@ var Converter = C({
 
 	convert: function (from, to, body, data) {
 		var fname = "$convert_" + from + "_$to_." + to;
-		if (typeof(this[fname]) == "function") {
+		if (typeof(this[fname]) === "function") {
 			return this[fname](body, data);
 		} else {
 			throw "Converter " + from + "→" + " not defined";
@@ -343,7 +343,7 @@ var Site = MetadataBase.extend({
 	},
 
 	getTemplate: function (name) {
-		if (name == "-")
+		if (name === "-")
 			return null;
 
 		var layout = this.metadata("@layout");
@@ -373,12 +373,12 @@ var Site = MetadataBase.extend({
 		return this._sidebar_cache[relpath];
 	},
 
-	convert: function (path, to, data) {
-		return this.converter.convert(P.extname(path), to, data.body(), data);
+	convert: function (path, to, data, extra) {
+		return this.converter.convert(P.extname(path), to, data.body(), extra);
 	},
 
 	traverse: function (path) {
-		if (typeof path == "string") {
+		if (typeof path === "string") {
 			path = path.split(".");
 		}
 		var current = this;
