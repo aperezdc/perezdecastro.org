@@ -1,7 +1,7 @@
 Title: A tale of multiple processes in WebKitGTK+
 Date: 2014-02-17 23:45
 Author: aperez
-Tags: webkit, igalia
+Tags: webkit, igalia, webkitgtk
 
 One of the goals we defined during the 2013 edition of the WebKitGTK+
 hackfest —among others— was enabling the Network Process, which my
