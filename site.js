@@ -106,11 +106,7 @@ var Page = MetadataBase.extend({
 	},
 
 	getContent: function (format, extra) {
-		var vname = "$content_" + format;
-		if (!this[vname]) {
-			this[vname] = this.site.convert(this._path, format, this, extra);
-		}
-		return this[vname];
+		return this.site.convert(this._path, format, this, extra);
 	},
 
 	getDate: function () {
@@ -206,7 +202,23 @@ var Page = MetadataBase.extend({
 
 	// Same as Page.content(), with URLs converted into absolute.
 	feedcontent: function () {
-		return this.getContent("html", { renderer: new MarkedFeedRenderer(this.fullurl()) });
+		var r = new marked.Renderer();
+		var baseurl = this.fullurl();
+
+		r.__image = r.image;
+		r.__link = r.link;
+
+		r.link = function (href, title, text) {
+			var resolved = U.resolve(baseurl, href);
+			return this.__link(resolved, title, text);
+		};
+
+		r.image = function (href, title, text) {
+			var resolved = U.resolve(baseurl, href);
+			return this.__image(resolved, title, text);
+		};
+
+		return this.getContent("html", { renderer: r });
 	},
 
 	is_index  : function () { return this.slug() == "index"; },
