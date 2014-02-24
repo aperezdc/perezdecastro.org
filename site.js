@@ -9,6 +9,7 @@
 "use strict";
 
 var F = require("fs");
+var U = require("url");
 var V = require("veil").defaults({ keys: "underscore" });
 var P = require("path");
 var G = require("glob");
@@ -43,6 +44,21 @@ var MetadataBase = C({
 
 	getMetadata: function () {
 		return this;
+	},
+});
+
+
+var MarkedFeedRenderer = C(marked.Renderer).extend({
+	init: function (baseurl) {
+		this._baseurl = baseurl;
+	},
+
+	link: function (href, title, text) {
+		return this.__link(U.resolve(this._baseurl, href), title, text);
+	},
+
+	image: function (href, title, text) {
+		return this.__image(U.resolve(this._baseurl, href), title, text);
 	},
 });
 
@@ -89,10 +105,10 @@ var Page = MetadataBase.extend({
 		return this._metadata;
 	},
 
-	getContent: function (format) {
+	getContent: function (format, extra) {
 		var vname = "$content_" + format;
 		if (!this[vname]) {
-			this[vname] = this.site.convert(this._path, format, this);
+			this[vname] = this.site.convert(this._path, format, this, extra);
 		}
 		return this[vname];
 	},
@@ -188,6 +204,11 @@ var Page = MetadataBase.extend({
 		return val.trim() != "true";
 	},
 
+	// Same as Page.content(), with URLs converted into absolute.
+	feedcontent: function () {
+		return this.getContent("html", { renderer: new MarkedFeedRenderer(this.fullurl()) });
+	},
+
 	is_index  : function () { return this.slug() == "index"; },
 	content   : function () { return this.getContent("html"); },
 	relpath   : function () { return this._path.slice(this.site.basedir.length + 1); },
@@ -209,7 +230,7 @@ exports.Page = Page;
 
 var Converter = C({
 	init: function () {
-		this.add("markdown", "html", function (data, extra) { return marked(data); });
+		this.add("markdown", "html", function (data, extra) { return marked(data, extra); });
 		this.add("mustache", "html", function (data, extra) { return M.render(data, extra); });
 	},
 

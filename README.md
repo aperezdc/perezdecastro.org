@@ -27,10 +27,10 @@ scripts. The following packages are needed:
 - `glob` - for scanning the file system.
 - `veil` - for loading metadata and content from source files.
 - `highlight.js` - for code syntax highlighting.
-- [`classy.js`](http://classy.pocoo.org/) - for easier OOP.
+- `fishbone` - for easier OOP.
 
-All packages can be installed with `npm`, except for `classy.js`
-which is bundled in the repository.
+All packages can be installed with `npm`, using the module list included
+in `package.json`.
 
 Content files are MIME-like, with a series of headers, and a body
 which conforms the actual content. See under the year-named
