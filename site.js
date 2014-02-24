@@ -359,7 +359,7 @@ var Site = MetadataBase.extend({
 	},
 
 	convert: function (path, to, data, extra) {
-		return this.converter.convert(P.extname(path), to, data.body(), extra);
+		return this.converter.convert(P.extname(path), to, data.body(), extra || data);
 	},
 
 	traverse: function (path) {
