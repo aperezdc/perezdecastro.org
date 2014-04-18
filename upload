@@ -14,5 +14,5 @@ exec rsync -hrlxzc \
     --exclude=twistd.pid      \
     --exclude=twistd.log       \
     --exclude=node_modules/     \
-    . shinto.homeunix.org:/srv/http/
+    . aperez.duckdns.org:/srv/http/
 

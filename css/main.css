@@ -164,7 +164,7 @@ figure.image a {
 p.image img,
 figure.image img {
    padding: 0.5em;
-   // border: 1px solid #f8f8fa;
+   /* border: 1px solid #f8f8fa; */
    border: 1px solid #99a;
    border-radius: 3px;
    -webkit-box-shadow: 0 4px 8px #aaa;
@@ -388,6 +388,12 @@ table#article-list span.category {
       width: 1026px; /* 1140px - 10% for margins */
       margin: 0 auto;
    }
+}
+
+@media only screen and (max-width: 768px) {
+	img {
+		max-width: 93% ! important;
+	}
 }
 
 /* ==========================================================================
