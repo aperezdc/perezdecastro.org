@@ -19,6 +19,8 @@
 	"@feeds": {
 		"%"            : ["atom", "rss"],
 		"feed.%"       : "content.articles",
+		"v8.%"         : "content.tag.v8",
+		"chromium.%"   : "content.tag.chromium",
 		"dmon.%"       : "content.tag.dmon",
 		"igalia.%"     : "content.tag.igalia",
 		"webkitgtk.%"  : "content.tag.webkitgtk",
