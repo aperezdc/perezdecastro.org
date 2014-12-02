@@ -51,6 +51,9 @@ if (feeds) {
 				if (feed === "%")
 					continue;
 				var data = site.traverse(feeds[feed]);
+				if (data === undefined || !data.length) {
+					data = [];
+				}
 				feed = feed.replace("%", format);
 				data = {
 					feed: feed,

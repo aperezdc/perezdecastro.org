@@ -371,7 +371,9 @@ var Site = MetadataBase.extend({
 			if (typeof current !== "object") {
 				return undefined;
 			}
-			if (typeof current[path[i]] === "function") {
+			if (typeof current[path[i]] === undefined) {
+				return undefined;
+			} else if (typeof current[path[i]] === "function") {
 				current = current[path[i]].apply(current);
 			} else {
 				current = current[path[i]];
