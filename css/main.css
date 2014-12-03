@@ -175,6 +175,30 @@ figure.image figcaption {
    color: #666;
 }
 
+article table {
+	padding: 0;
+	margin: 1em auto 2em auto;
+  -webkit-box-shadow: 0 4px 8px #aaa;
+     -moz-box-shadow: 0 4px 8px #aaa;
+          box-shadow: 0 4px 8px #aaa;
+}
+
+article table th,
+article table td {
+	padding: 0.25em 1.25em;
+}
+
+article table th {
+	text-align: center ! important;
+	color: #efefff;
+	background: #334;
+}
+
+article table tr:nth-child(even) {
+	background: #efefff;
+}
+
+
 /* ==============
     MOBILE: Main
    ============== */
@@ -228,15 +252,30 @@ p.article-date {
    margin-top: -1em;
 }
 
+table#article-list {
+	-webkit-box-shadow: none;
+     -moz-box-shadow: none;
+         -box-shadow: none;
+}
+
 table#article-list td {
    display: block;
 }
 
+table#article-list tr {
+	background: none;
+}
+
 table#article-list tr:hover {
+	background: #f8f8ff;
+}
+
+table#article-list tr:hover td.date {
+	color: #555;
 }
 
 table#article-list td.date {
-   color: #aaa;
+   color: #888;
    font-weight: lighter;
    font-size: small;
    margin-top: 1.5em;
