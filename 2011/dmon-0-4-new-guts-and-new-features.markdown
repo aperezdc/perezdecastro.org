@@ -73,7 +73,9 @@ Linux][] again there is a package [available at the AUR][].
 Also, I will be in Berlin in August, from 5th to 12th... Yes, you
 guessed it: I'm attending the Desktop Summit:
 
+<figure>
 ![attending the Desktop Summit in Berlin][]
+</figure>
 
 See you around... and happy monitoring!
 
