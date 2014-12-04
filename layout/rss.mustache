@@ -22,6 +22,9 @@
 		<item>
 			<title>{{ title }}</title>
 			<link>{{ fullurl }}</link>
+			{{# tags }}
+			<category>{{ . }}</category>
+			{{/ tags }}
 			<guid>{{{ fullurl }}}</guid>
 			<pubDate>{{ rfc822date }}</pubDate>
 			<description>{{ feedcontent }}</description>
