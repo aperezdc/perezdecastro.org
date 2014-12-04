@@ -24,10 +24,10 @@
 		<id>{{{ fullurl }}}</id>
 		<updated>{{ isodate }}</updated>
 		<link rel="alternate" type="text/html" href="{{{ fullurl }}}" />
-		<content type="html">{{ feedcontent }}</content>
 		{{# tags }}
 		<category term="{{ . }}" label="{{ . }}" />
 		{{/ tags }}
+		<content type="html">{{ feedcontent }}</content>
 		{{# author }}
 		<author>
 			<name>{{ author }}</name>
