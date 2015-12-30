@@ -24,7 +24,8 @@
 		"dmon.%"       : "content.tag.dmon",
 		"igalia.%"     : "content.tag.igalia",
 		"webkitgtk.%"  : "content.tag.webkitgtk",
-		"connectical.%": "content.tag.connectical"
+		"connectical.%": "content.tag.connectical",
+		"snabbswitch.%": "content.tag.snabbswitch"
 	},
 	"@layout": {
 		"@default"  : "layout/base.mustache",
