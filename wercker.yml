@@ -1,0 +1,14 @@
+box: node
+build:
+  # The steps that will be executed on build
+  # Steps make up the actions in your pipeline
+  # Read more about steps on our dev center:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    - npm-install
+    - script:
+        name: Build
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+          ./build
