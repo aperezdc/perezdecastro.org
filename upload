@@ -1,5 +1,4 @@
 #! /bin/bash
-
 exec rsync -hrlxzc \
     --progress      \
     --safe-links     \
@@ -14,5 +13,4 @@ exec rsync -hrlxzc \
     --exclude=twistd.pid      \
     --exclude=twistd.log       \
     --exclude=node_modules/     \
-    . aperez.duckdns.org:/srv/http/
-
+    . crypt.connectical.com:/srv/http/perezdecastro.org/
