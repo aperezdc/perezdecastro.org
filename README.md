@@ -1,10 +1,8 @@
 # Personal Adrian's website and generator
 
-This the source code for my personal website. For the moment it is WIP
-and in the long term term I plan to import selected content from my
-[personal blog](http://hario.wordpress.com) and my [Igalia
-blog](http://blogs.igalia.com/aperez), consolidating all the content
-in a single place.
+![Build status](https://app.wercker.com/status/0ed46b714aa7d26c28a62c81493f061e/m/master "wercker status")](https://app.wercker.com/project/bykey/0ed46b714aa7d26c28a62c81493f061e)
+
+This the source code for [my personal website](http://perezdecastro.org).
 
 ## License
 
