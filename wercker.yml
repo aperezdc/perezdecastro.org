@@ -12,3 +12,29 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
           ./build
+deploy:
+  steps:
+    - add-to-known-hosts:
+        hostname: crypt.connectical.com
+    - mktemp:
+        envvar: SSH_KEY_PATH
+    - create-file:
+        name: write key
+        filename: $SSH_KEY_PATH
+        content: $SSH_KEY_PRIVATE
+        overwrite: true
+        hide-from-log: true
+    - script:
+        name: rsync deploy
+        code: |
+          rsync -hrlxzc --safe-links \
+            --rsh="ssh -i $SSH_KEY_PATH -l aperez -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+            --exclude=.git/ \
+            --exclude=build \
+            --exclude=upload \
+            --exclude=site.js \
+            --exclude=layout/ \
+            --exclude=sidebar/ \
+            --exclude=site.json \
+            --exclude=node_modules/ \
+            . crypt.connectical.com:/srv/http/perezdecastro.org
