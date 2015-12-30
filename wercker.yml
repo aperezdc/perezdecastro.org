@@ -12,6 +12,10 @@ build:
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
           ./build
+    - script:
+        name: Copy output
+        code: |-
+          rsync -avz "$WERCKER_SOURCE_DIR/" "$WERCKER_OUTPUT_DIR"
 deploy:
   steps:
     - install-packages:
@@ -27,10 +31,10 @@ deploy:
         overwrite: true
         hide-from-log: true
     - script:
-        name: rsync deploy
+        name: rsync upload
         code: |
           rsync -hrlxzc --safe-links \
-            --rsh="ssh -i $SSH_KEY_PATH -l aperez -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+            --rsh="ssh -i $SSH_KEY_PATH -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
             --exclude=.git/ \
             --exclude=build \
             --exclude=upload \
@@ -39,4 +43,4 @@ deploy:
             --exclude=sidebar/ \
             --exclude=site.json \
             --exclude=node_modules/ \
-            . crypt.connectical.com:/srv/http/perezdecastro.org
+            . aperez@crypt.connectical.com:/srv/http/perezdecastro.org
