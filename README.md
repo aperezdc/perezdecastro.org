@@ -6,12 +6,8 @@ This the source code for [my personal website](http://perezdecastro.org).
 
 ## License
 
-- Articles (`*.markdown` files) are distributed under [Creative
-  Commons Attribution-NoDerivs license](http://www.tldrlegal.com/license/creative-commons-attribution-noderivs-%28cc-nd%29).
-- Generator code is distributed under the terms of the [MIT
-  license](http://www.tldrlegal.com/license/mit-license).
-- The bundled `classy.js` is distributed under the terms of the [BSD
-  license](http://www.tldrlegal.com/license/bsd-3-clause-license-%28revised%29).
+- Articles (`*.markdown` files) are distributed under [Creative Commons Attribution-NoDerivs license](http://www.tldrlegal.com/license/creative-commons-attribution-noderivs-%28cc-nd%29).
+- Generator code is distributed under the terms of the [MIT license](http://www.tldrlegal.com/license/mit-license).
 
 ## The generator
 
@@ -27,8 +23,8 @@ scripts. The following packages are needed:
 - `highlight.js` - for code syntax highlighting.
 - `fishbone` - for easier OOP.
 
-All packages can be installed with `npm`, using the module list included
-in `package.json`.
+All packages can be installed with `npm install`, using the module list
+included in `package.json`.
 
 Content files are MIME-like, with a series of headers, and a body
 which conforms the actual content. See under the year-named
