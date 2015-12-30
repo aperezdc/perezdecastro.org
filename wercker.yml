@@ -14,7 +14,9 @@ build:
           ./build
 deploy:
   steps:
-    - add-to-known-hosts:
+    - install-packages:
+        packages: openssh-client rsync
+    - add-to-known_hosts:
         hostname: crypt.connectical.com
     - mktemp:
         envvar: SSH_KEY_PATH
