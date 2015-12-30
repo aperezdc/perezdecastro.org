@@ -15,7 +15,7 @@ build:
     - script:
         name: Copy output
         code: |-
-          rsync -avz "$WERCKER_SOURCE_DIR/" "$WERCKER_OUTPUT_DIR"
+          cp -var "$WERCKER_SOURCE_DIR"/* "$WERCKER_OUTPUT_DIR"/
 deploy:
   steps:
     - install-packages:
