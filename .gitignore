@@ -10,6 +10,7 @@ webkitgtk.atom
 connectical.atom
 chromium.atom
 v8.atom
+snabbswitch.atom
 feed.rss
 dmon.rss
 igalia.rss
@@ -17,3 +18,4 @@ webkitgtk.rss
 connectical.rss
 chromium.rss
 v8.rss
+snabbswitch.rss
