@@ -5,7 +5,7 @@ Tags: igalia, snabbswitch, snabbwall
 
 If you have been following the blogs of my colleagues [Katerina](http://luatime.org), [Diego](http://blogs.igalia.com/dpino/), and [Andy](http://wingolog.org) it should not be a surprise for you to know that in [Igalia](http://www.igalia.com) we have a small —and awesome!— team working with [Snabb Switch](http://snabb.co) to provide novel software–mostly solutions for networking.
 
-We are now starting the development of [SnabbWall](http://snabbwall.org) is an *application-level* (Layer-7) firewall *suite* for Snabb Switch, and yours truly happens to be the lead developer, so I figured out this is a good moment to introduce the project, which is kindly sponsored by the [NLnet Foundation](http://nlnet.nl/).
+We are now starting the development of [SnabbWall](http://snabbwall.org), an *application-level* (Layer-7) firewall *suite* for Snabb Switch, and yours truly happens to be the lead developer, so I figured out this is a good moment to introduce the project, which is kindly sponsored by the [NLnet Foundation](http://nlnet.nl/).
 
 <figure style="text-align:center">
   ![](http://snabbwall.org/images/igalia-logo.png)
@@ -17,11 +17,11 @@ We are now starting the development of [SnabbWall](http://snabbwall.org) is an *
 The one-minute introduction to Snabb Switch
 -------------------------------------------
 
-Snabb Switch (which I'm going to abbreviate as *SnS*, it's getting long to type it!) works by taking over network interfaces, bypassing the kernel drivers, and using its own. When used to implement a certain network functionality, what your (SnS) program “sees” is no more than streams of raw packets. Gone are the TCP/IP stack, BSD sockets, and all the other functionality provided by the operating system kernel to user space programs. Heck, you even need to roll your [own](https://github.com/SnabbCo/snabbswitch/tree/master/src/apps/intel) [drivers](https://github.com/SnabbCo/snabbswitch/tree/master/src/apps/solarflare)! There is nothing in there but the hardware waiting to have streams of electrons blasted through it. But things go *real* fast in there without the overhead of a traditional network stack, so, despite the void, it is a good place to massage packets and pass them along.
+Snabb Switch (which I'm going to abbreviate as *SnS*, it's getting long to type it!) works by taking over network interfaces, bypassing the kernel drivers, and using its own. When used to implement a certain network functionality, what your (SnS) program “sees” is no more than streams of raw packets. Gone are the TCP/IP stack, BSD sockets, and all the other functionality provided by the operating system kernel to user space programs. Heck, you even need to [access hardware](https://github.com/SnabbCo/snabbswitch/tree/master/src/apps/intel) [directly](https://github.com/SnabbCo/snabbswitch/tree/master/src/apps/solarflare)! There is nothing in there but the hardware waiting to have streams of electrons blasted through it. But things go *real* fast without the overhead of a traditional network stack, so despite the void, it is a good place to massage packets and pass them along.
 
 It is fortunate that empty spaces do not last long as such: SnS comes with a set of [built-in applications](https://github.com/SnabbCo/snabbswitch/tree/master/src/apps), which can be combined in different ways to achieve our (networking-related) goals. For example, we could pick the [bridge application](https://github.com/SnabbCo/snabbswitch/tree/master/src/apps/bridge), combine it with the driver for our network interfaces, and *(bam!)* we have a super fast Ethernet bridge. And even more.
 
-Now is when we remember that SnS is *soft*ware component. That means that it is code running in a computer, as a normal user space program, which can be modified. Why not adding packet filtering capabilities to that bridge we built, so one of the ports only accepts certain kinds of traffic? We could write a small SnS application which only allows HTTP traffic to pass by:
+Now is when we remember that SnS is *soft*ware component. That means that it is code running in a computer, and as such, it can be modified. Why not adding packet filtering capabilities to that bridge we built, so one of the ports only accepts certain kinds of traffic? We could write a small SnS application which only allows HTTP traffic to pass by:
 
 ```lua
 local ethernet = require("lib.protocol.ethernet")
@@ -29,7 +29,7 @@ local datagram = require("lib.protocol.datagram")
 local link = require("core.link")
 
 local HttpOnly = {
-  new = function (self) return setmetatable({}, self end;
+  new = function (self) return setmetatable({}, self) end;
   push = function (self)
     local n = math.min(link.nreadable(self.input.input),
                        link.nwritable(self.output.output))
