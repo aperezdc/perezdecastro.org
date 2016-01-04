@@ -34,9 +34,15 @@
 	<link rel="alternate" href="/feed.atom" type="application/atom+xml" title="perezdecastro.org Atom Feed">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Knewave&text=perezdecastro.org" type="text/css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:700,400|Raleway:700,400" type="text/css">
+
+	{{# site.draft}}
 	<link rel="stylesheet" href="/css/normalize.min.css">
 	<link rel="stylesheet" href="/css/highlight.css">
 	<link rel="stylesheet" href="/css/main.css">
+	{{/ site.draft }}
+	{{^ site.draft }}
+	<link rel="stylesheet" href="/css/all.css">
+	{{/ site.draft }}
 
 	<!--[if lt IE 9]>
 	<script src="/js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
