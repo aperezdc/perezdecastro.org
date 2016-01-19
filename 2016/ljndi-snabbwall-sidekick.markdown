@@ -3,7 +3,7 @@ Date: 2016-01-19 20:29:39
 Author: aperez
 Tags: igalia, snabbswitch, snabbwall
 
-Howdy, and happy 2016! Last time we met here, I wrote about [SnabbWall][swall], a suite of Snabb Switch applications implementing the machinery needed for a [Layer-7 firewall](https://en.wikipedia.org/wiki/Application_firewall) using [deep packet inspection](https://en.wikipedia.org/wiki/Deep_packet_inspection), and a firewall program itself. The work I am doing in SnabbWall is the result of ongoing collaboration between [Igalia](http://www.igalia.com) and the [NLnet Foundation](http://nlnet.nl/). We are very grateful of having their sponsorship.
+Howdy, and happy 2016! Last time we met here, I wrote about [SnabbWall][swall], a suite of Snabb Switch applications implementing the machinery needed for a [Layer-7 firewall](https://en.wikipedia.org/wiki/Application_firewall) using [deep packet inspection](https://en.wikipedia.org/wiki/Deep_packet_inspection), and a firewall program itself. The work I am doing in SnabbWall is the result of ongoing collaboration between [Igalia](http://www.igalia.com) and the [NLnet Foundation](http://nlnet.nl/). We are very grateful to have their sponsorship.
 
 <figure style="text-align:center">
   ![](http://snabbwall.org/images/igalia-logo.png)
