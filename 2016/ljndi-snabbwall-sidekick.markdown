@@ -148,11 +148,11 @@ The basic idea goes this way:
 
   1. Build a “flow identifier” (*flowid*) from information in the packet (more on this below).
   2. If the flow table does not have an entry for the *flowid*, create a new one. Make sure you create also a `ndpi.flow` object, and two `ndpi.id` objects (one for the source host, another for the destination).
-  3. Call `detection_module:process_packet()`, passing the `ndpi.flow` and `ndpi.id` objects corresponding to the flow. If this function returns anything else than `ndpi.protocol.PROTOCOL_UNKNOWN`, then the protocol has been identified (jackpot!).
+  3. Call `ndpi.detection_module:process_packet()`, passing the `ndpi.flow` and `ndpi.id` objects corresponding to the flow. If this function returns anything else than `ndpi.protocol.PROTOCOL_UNKNOWN`, then the protocol has been identified (jackpot!).
 
-So what's a “flow identifier” anyway? It can be any value (really!), as long as you can calculate it solely from data in the packets, and each identifier should be unique for each application (Layer-7!) passing data over the network between a pair of hosts. For IP-based protocols (TCP, UDP), you want to use at least the IP addresses and ports involved. Note that nDPI considers the direction of the data
+So what's a “flow identifier” anyway? It can be any value (really!), as long as you can calculate it solely from data in the packets, and each identifier should be unique for each application (Layer-7!) passing data over the network between a pair of hosts. For IP-based protocols (TCP, UDP), you want to use at least the IP addresses and ports involved. Note that nDPI considers the direction of the data *irrelevant for the flows* —no matter in which direction traffic goes, it belongs to a certain application—, but the direction of the *source and destination of each inspected packet is relevant*. That means that your flow identifier must be the same regardless of the direction, but the `ndpi.id` values passed as the two last arguments to `:process_packet()` have to indicate the direction of the packets.
 
-There are a number of improvements one can make on top of the basic method above, being the most obvious one using [VLAN](https://en.wikipedia.org/wiki/IEEE_802.1Q) tags to identify flows (`readpcap` does this already). But I am leaving flow identification for a follow-up post. Dear readers: think about it as homework, and make sure to check the answers with me in the following weeks.
+There are a number of improvements one can make on top of the basic method above, being the most obvious one using [VLAN](https://en.wikipedia.org/wiki/IEEE_802.1Q) tags to identify flows (`readpcap` does this already), but I am leaving flow identification for a follow-up post. Dear readers: think about it as homework, and make sure to check the answers with me in the following weeks.
 
 (Or, you know, just go ahead, clone [ljndpi](https://github.com/aperezdc/ljndpi), and experiment!)
 
