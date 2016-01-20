@@ -43,7 +43,7 @@ Telling nDPI which protocols it should detect is done using a big bitmask, with 
 
 The implementation of `NDPI_PROTOCOL_BITMASK` in C uses a bunch of macros to operate on a `struct` which wraps an array of integers, and they do not lend themselves to be easily wrapped using the FFI extension. Because of that, I decided to [reimplement it in pure Lua](https://github.com/aperezdc/ljndpi/blob/master/ndpi/protocol_bitmask.lua). The size of the array of integers in the bitmask `struct` and their bit width may vary across different nDPI versions. In preparation for future changes —which should not happen often—, the type is defined using the values of the `NDPI_NUM_BITS` and `NDPI_BITS` constants: copying their values from the nDPI headers is the only change needed.
 
-As a bonus, I have thrown in support for calls to all methods except `:is_set()`. This is super convenient:
+As a bonus, I have thrown in support for chaining calls to all methods except `:is_set()`. This is super convenient:
 
 ```lua
 local bits = ndpi.protocol_bitmask()
