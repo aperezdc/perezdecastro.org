@@ -13,7 +13,7 @@ Howdy, and happy 2016! Last time we met here, I wrote about [SnabbWall][swall], 
 
 We are treating development of SnabbWall like every other project, and among the periodic duties it is important to report progress. Development is happening 100% out in the open, so early on we decided to do also make the status updates open—by blogging them.
 
-*(For those interested in following only related posts, I have set up an additional feed: [RSS](http://perezdecastro.org/snabbswitch.rss), [Atom](http://perezdecastro.org/snabbswitch.atom).)*
+*(For those interested in following only related posts, I have set up an additional feed: [RSS](https://perezdecastro.org/snabbswitch.rss), [Atom](https://perezdecastro.org/snabbswitch.atom).)*
 
 
 nDPI Lua Binding: Check
@@ -22,7 +22,7 @@ nDPI Lua Binding: Check
 The second milestone for SnabbWall was having a binding using the handy [LuaJIT FFI extension][ljffi] for the [nDPI][ndpi] library, and I am happy to announce that the binding, dubbed `ljndpi`, is fairly complete by now. As an added bonus, I have been careful to make the code independet from Snabb Switch, which made it possible to split out the history into a [separate repository][ljndpi], which gets imported under `lib/ljndpi/` in the SnabbWall repository using [git-subtree](https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/), and then [built](https://github.com/aperezdc/snabbswitch/commit/bfd172da861737d1a1b93b6d0e9e2cf6df959a0a) into the `snabb` executable. This is the same approach currently used in Snabb Switch to build the external dependencies (that is [ljsyscall](https://github.com/justincormack/ljsyscall), [pflua](https://github.com/Igalia/pflua), and [LuaJIT](http://luajit.org)).
 
 <figure class="image">
-  ![](http://perezdecastro.org/images/a-team-plan.png)
+  ![](https://perezdecastro.org/images/a-team-plan.png)
   <figcaption>Hannibal Smith, happy about the project results</figcaption>
 </figure>
 

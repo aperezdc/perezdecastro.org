@@ -90,7 +90,7 @@ a moment as good as any to make a new SSH key, and propagate it to the hosts
 where I was using the old one.
 
 <figure class="image">
-  ![](http://perezdecastro.org/2015/should-change-ssh-key.png)
+  ![](https://perezdecastro.org/2015/should-change-ssh-key.png)
   <figcaption>Indeed, I should.</figcaption>
 </figure>
 

@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 ```
 
 <figure class="image">
-	![](http://perezdecastro.org/2014/wk-processes-everywhere.png)
+	![](https://perezdecastro.org/2014/wk-processes-everywhere.png)
 	<figcaption>The result of a single function call</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ going to cause an involuntary <abbr title="Denial Of Service">DoS</abbr>
 attack in systems with scarce memory?
 
 <figure class="image">
-	![](http://perezdecastro.org/2014/fry-wk-process-mapping.png)
+	![](https://perezdecastro.org/2014/fry-wk-process-mapping.png)
 	<figcaption>Fry also wonders</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ will need to be updated to handle the fact that each Web Process will
 load and instantiate the Web Extensions.
 
 <figure class="image">
-	![](http://perezdecastro.org/2014/wk-not-simply-spawn-processes.png)
+	![](https://perezdecastro.org/2014/wk-not-simply-spawn-processes.png)
 	<figcaption>Because things are never like that in real life</figcaption>
 </figure>
 

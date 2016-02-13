@@ -3,7 +3,7 @@
 	"tagline": "Moikka! Here's Adrián. I work for <a href='http://igalia.com'>Igalia</a>.",
 	"author": "Adrián Pérez de Castro",
 	"author_email": "adrian@perezdecastro.org",
-	"baseurl": "http://perezdecastro.org",
+	"baseurl": "https://perezdecastro.org",
 
 	"navigation": [
 		{ "text": "Twitter", "link": "http://twitter.com/aperezdc" },

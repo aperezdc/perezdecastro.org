@@ -8,7 +8,7 @@
 	"author": {
 		"name": "Adrian Perez de Castro",
 		"email": "adrian@perezdecastro.org",
-		"url": "http://perezdecastro.org"
+		"url": "https://perezdecastro.org"
 	},
 	"homepage": "http://github.com/aperezdc/perezdecastro.org",
 	"description": "Static website generator (and content) for perezdecastro.org",
