@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/aperezdc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://perezdecastro.org
+  * I am aperezdc (https://keybase.io/aperezdc) on keybase.
+  * I have a public key ASAzr9DazRK_7ZrJ_u8ZS-FZgch3SUTyetvdoKWljLFj8go
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01206489ffce1eaaf3a71dddecfd4adfbf1e3bfb8ddab7aa173da346618bdcb2a0640a",
+            "host": "keybase.io",
+            "kid": "012033afd0dacd12bfed9ac9feef194be15981c8774944f27adbdda0a5a58cb163f20a",
+            "uid": "c61ba0bf10a95729b0661349a15d8e19",
+            "username": "aperezdc"
+        },
+        "service": {                                                                                                                                                                    [10/59]
+            "hostname": "perezdecastro.org",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1467472639,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1467472504,
+        "hash": "62ef0ccdabd68735d578e65cb4224ebeb8d0fa4b6f549a5b8dde66d06405bb6b2aa6b56f1703f593c477a87507aa38d332ea42c31093db42d9c4aff3956c4ca4",
+        "seqno": 506872
+    },
+    "prev": "d67d91b5d60c3f50cea1ad056918577c6fab6b51086d5aece2fe62d7097393c3",
+    "seqno": 11,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgM6/Q2s0Sv+2ayf7vGUvhWYHId0lE8nrb3aClpYyxY/IKp3BheWxvYWTFAvp7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNjQ4OWZmY2UxZWFhZjNhNzFkZGRlY2ZkNGFkZmJmMWUzYmZiOGRkYWI3YWExNzNkYTM0NjYxOGJkY2IyYTA2NDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzNhZmQwZGFjZDEyYmZlZDlhYzlmZWVmMTk0YmUxNTk4MWM4Nzc0OTQ0ZjI3YWRiZGRhMGE1YTU4Y2IxNjNmMjBhIiwidWlkIjoiYzYxYmEwYmYxMGE5NTcyOWIwNjYxMzQ5YTE1ZDhlMTkiLCJ1c2VybmFtZSI6ImFwZXJlemRjIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJwZXJlemRlY2FzdHJvLm9yZyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE2In0sImN0aW1lIjoxNDY3NDcyNjM5LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0Njc0NzI1MDQsImhhc2giOiI2MmVmMGNjZGFiZDY4NzM1ZDU3OGU2NWNiNDIyNGViZWI4ZDBmYTRiNmY1NDlhNWI4ZGRlNjZkMDY0MDViYjZiMmFhNmI1NmYxNzAzZjU5M2M0NzdhODc1MDdhYTM4ZDMzMmVhNDJjMzEwOTNkYjQyZDljNGFmZjM5NTZjNGNhNCIsInNlcW5vIjo1MDY4NzJ9LCJwcmV2IjoiZDY3ZDkxYjVkNjBjM2Y1MGNlYTFhZDA1NjkxODU3N2M2ZmFiNmI1MTA4NmQ1YWVjZTJmZTYyZDcwOTczOTNjMyIsInNlcW5vIjoxMSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEASFq48GoWXF8uOZSFsMTpyi5n7XnWNm82hJMjCDJFWGgCOVyIYrX3k/eWgID8y4ZPQt6HwSn84UuWe14Hd7egPqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgewNFbf6ralnZRSyHL4yhEVAKo5JidxK4AODk33E8gMKjdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aperezdc
+
+==================================================================
