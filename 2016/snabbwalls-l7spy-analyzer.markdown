@@ -20,11 +20,11 @@ sponsorship from the [NLnet Foundation](https://nlnet.nl). (Thanks!)
 A Digression
 ------------
 
-There are two things unrelated to `L7Spy` I want to mention:
+There are two things related to `L7Spy` I want to mention beforehand:
 
 ### nDPI 1.8 is Now Supported
 
-The changes from the [recently released][lndpi0.3.3] `ljndpi` v0.3.3 have been
+The changes from the [recently released][ljndpi0.3.3] `ljndpi` v0.3.3 have been
 merged into the SnabbWall repository, which means that now it also supports
 using [version 1.8 of the nDPI library](https://github.com/ntop/nDPI/releases/tag/1.8).
 
@@ -32,31 +32,34 @@ using [version 1.8 of the nDPI library](https://github.com/ntop/nDPI/releases/ta
 
 [Snabb][snabb] follows a monthly release schedule. Initially, I thought it
 would be better to do all the development for SnabbWall starting from a given
-release, and incorporate the changes from upstream later on, when cutting
-releases. I noticed how it might end up being difficult to
-[rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) SnabbWall on
-top of the latest release, and switched to the following scheme:
+Snabb release, and incorporate the changes from upstream later on, after the
+first one of SnabbWall is done. I noticed how it might end up being difficult
+to [rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) SnabbWall
+on top of the changes accumulated from the upstream repository, and switched
+to the following scheme:
 
 * The branch containing the most up-to-date development code is always in the
   `snabbwall` branch.
 * Whenever a new Snabb version is released, changes are merged from the
   upstream repository using its corresponding release tag.
-* When a SnabbWall release is done, it will be based on the most
-  recently-merged Snabb release. A release tag will be created for it.
-* If a released version needs fixing, a maintenance branch for the release is
-  created, starting from the release tag. Patches have to be backported or
-  purposedfully made for that release.
+* When a SnabbWall release is done, it tagged from current contents of the
+  `snabbwall` branch, which means it is automatically based on the latest
+  Snabb release.
+* If a released version needs fixing, a maintenance branch `snabbwall-vX.Y`
+  for it is created from the release tag. Patches have to be backported or
+  purposedfully made for that this new branch.
 
-The new approach reduces the burden of keeping up with changes in Snabb.
+This approach reduces the burden of keeping up with changes in Snabb, while
+still allowing to make bugfix releases of any SnabbWall version when needed.
 
 
 L7Spy
 -----
 
-The `L7Spy` is a Snabb application, and like any other application, it can be
-reused in your own application networks. It is made to be connected in a few
-different ways, which should allow for painless integration. The application
-has two bidirectional endpoints called *south* and *north*:
+The `L7Spy` is a Snabb application, and as such it can be reused in your own
+application networks. It is made to be connected in a few different ways,
+which should allow for painless integration. The application has two
+bidirectional endpoints called *south* and *north*:
 
 <figure style="text-align:center">
   ![](https://perezdecastro.org/2016/app-l7spy.png)
@@ -64,14 +67,14 @@ has two bidirectional endpoints called *south* and *north*:
 </figure>
 
 Packets entering one of the ends are forwarded unmodified to the other end,
-in both directions. Packets are scanned as they flow through the application.
+in both directions, and they are scanned as they pass through the application.
 
 The only mandatory connection is the receiving side of either *south* or
-*north*: this allows for using `L7Spy` as a “kitchen sink” which swallows and
-scans packets, without them being sent anywhere. As an example, this can be
+*north*: this allows for using `L7Spy` as a “kitchen sink”, swallowing the
+scanned packets without sending them anywhere. As an example, this can be
 used to connect a [RawSocket
 application](https://github.com/snabbco/snabb/tree/master/src/apps/socket) to
-`L7Spu`, attach the `RawSocket` to an existing network interface, and do
+`L7Spy`, attach the `RawSocket` to an existing network interface, and do
 passive analysis of the traffic passing through that interface:
 
 <figure style="text-align:center">
@@ -114,7 +117,7 @@ aperez@hikari ~/snabb/src %
 ```
 
 For the moment being, only the `spy` subcommand is provided: it exercises the
-`L7Spy` application by feeding packets into it captured from one of the
+`L7Spy` application by feeding into it packets captured from one of the
 supported sources. It can work in *batch mode* —the default—, which is useful
 to analyze a static [pcap](https://en.wikipedia.org/wiki/Pcap) file. The
 following example analyzes the full contents of the `pcap` file, reporting at
@@ -139,9 +142,9 @@ this kind of service.
 It is also possible to ingest traffic directly from a network interface in
 *live mode*. Apart from the [drivers for Intel
 cards](https://github.com/snabbco/snabb/blob/master/src/apps/intel/README.md)
-included with Snabb (selectable using `intel10g` and `intel1g`, respectively)
+included with Snabb (selectable using the `intel10g` and `intel1g` sources)
 there are two hardware-independent sources for [TAP
-devices](https://en.wikipedia.org/wiki/TUN/TAP) (`tap`) and using RAW sockets
+devices](https://en.wikipedia.org/wiki/TUN/TAP) (`tap`) and RAW sockets
 (`raw`). Let's use a RAW socket to sniff a copy of every packet which passes
 through the a kernel-managed network interface, while opening a well known
 search engine in a browser using their `https://` URL:
