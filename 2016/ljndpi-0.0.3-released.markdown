@@ -63,7 +63,7 @@ differ, and `ndpi.wrap` [shuffles them around as
 needed](https://github.com/aperezdc/ljndpi/blob/master/ndpi/wrap.lua#L104) in
 order to avoid changes in the interface exposed to Lua:
 
-```
+```lua
 if lib_version.major == 7 then
    -- ...
 else
