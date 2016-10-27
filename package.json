@@ -14,10 +14,10 @@
 	"description": "Static website generator (and content) for perezdecastro.org",
 	"dependencies": {
 		"fishbone"    : "~1.0.1",
-		"glob"        : "~4.3.1",
-		"highlight.js": "~8.4.0",
+		"glob"        : "~7.1.1",
+		"highlight.js": "~9.7.0",
 		"marked"      : "~0.3.2",
-		"mustache"    : "~0.8.2",
+		"mustache"    : "~2.2.1",
 		"veil"        : "~0.1.0"
 	}
 }
