@@ -8,7 +8,8 @@
 	"navigation": [
 		{ "text": "Twitter", "link": "http://twitter.com/aperezdc" },
 		{ "text": "GitHub",  "link": "https://github.com/aperezdc?tab=repositories" },
-		{ "text": "Photos",  "link": "http://www.flickr.com/photos/aperezdc/" }
+		{ "text": "Photos",  "link": "http://www.flickr.com/photos/aperezdc/" },
+		{ "text": "Contact", "link": "/contact.html" }
 	],
 
 	"@content": {
