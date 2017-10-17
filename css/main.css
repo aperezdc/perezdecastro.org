@@ -178,6 +178,11 @@ figure figcaption {
    color: #666;
 }
 
+figure.rollover img { display: none }
+figure.rollover img:first-child { display: inline }
+figure.rollover:hover img { display: inline }
+figure.rollover:hover img:first-child { display: none }
+
 article table {
 	padding: 0;
 	margin: 1em auto 2em auto;
