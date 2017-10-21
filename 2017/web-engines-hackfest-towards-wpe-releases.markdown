@@ -143,8 +143,8 @@ Lately I have been taking care of keeping the WebKitGTK+ packaging for
 Buildroot up-to-date and it has been delightful to work with such a welcoming
 community. I am looking forward to having WPE supported there, and to keep
 maintaining the build definitions for both. This will allow making use of WPE
-with relative ease, while making ensuring that Buildroot users will pick our
-updates promptly.
+with relative ease, while ensuring that Buildroot users will pick our updates
+promptly.
 
 
 Generic System Font
