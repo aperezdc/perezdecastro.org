@@ -6,10 +6,11 @@
 	"baseurl": "https://perezdecastro.org",
 
 	"navigation": [
-		{ "text": "Twitter", "link": "http://twitter.com/aperezdc" },
-		{ "text": "GitHub",  "link": "https://github.com/aperezdc?tab=repositories" },
-		{ "text": "Photos",  "link": "http://www.flickr.com/photos/aperezdc/" },
-		{ "text": "Contact", "link": "/contact.html" }
+		{ "text": "Mastodon", "link": "https://mastodon.social/@aperezdc", "rel": "me" },
+		{ "text": "Twitter",  "link": "http://twitter.com/aperezdc" },
+		{ "text": "GitHub",   "link": "https://github.com/aperezdc?tab=repositories" },
+		{ "text": "Photos",   "link": "http://www.flickr.com/photos/aperezdc/" },
+		{ "text": "Contact",  "link": "/contact.html" }
 	],
 
 	"@content": {
