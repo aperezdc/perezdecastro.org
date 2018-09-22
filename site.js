@@ -178,13 +178,6 @@ var Page = MetadataBase.extend({
 		return this.metadata("output_suffix", "html");
 	},
 
-	nocomments: function () {
-		var val = this.metadata("comments");
-		if (val === null || val === undefined)
-			return false;
-		return val.trim() != "true";
-	},
-
 	// Same as Page.content(), with URLs converted into absolute.
 	feedcontent: function () {
 		var r = new marked.Renderer();

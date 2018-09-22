@@ -1,5 +1,4 @@
 title: Contact
-comments: false
 hide_date: true
 
 ```lua
