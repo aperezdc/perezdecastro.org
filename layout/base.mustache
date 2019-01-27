@@ -28,16 +28,16 @@
 	{{/ is_index }}
 
 	<link rel="alternate" href="/feed.atom" type="application/atom+xml" title="perezdecastro.org Atom Feed">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Knewave&text=perezdecastro.org" type="text/css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700,400|Work+Sans:700,400" type="text/css">
 
 	{{# site.draft}}
-	<link rel="stylesheet" href="/css/normalize.min.css">
-	<link rel="stylesheet" href="/css/highlight.css">
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/normalize-opentype.css">
+	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="/css/highlight.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	{{/ site.draft }}
 	{{^ site.draft }}
-	<link rel="stylesheet" href="/css/all.css">
+	<link rel="stylesheet" type="text/css" href="/css/all.css">
 	{{/ site.draft }}
 
 	<!--[if lt IE 9]>
