@@ -25,3 +25,8 @@ IP addresses are anyway “public” information in the sense that any server
 we connect to gets to know it, and that is part of how the Internet works.
 
 Thanks for reading, and enjoy the ad- and tracker-free experience!
+
+<em>
+**Update, January 27th 2019**: The usage of Google Fonts is gone, the last
+remaining bit, is gone now that I am self-hosting the Web fonts as well.
+</em>
