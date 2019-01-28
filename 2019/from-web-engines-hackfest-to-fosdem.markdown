@@ -27,8 +27,8 @@ This may seem contradictory because the event includes hundreds of talks and
 workshops tucked in just two days. Don't get me wrong, the event is
 *physically* tiresome, but there are always tons of new and exciting topics to
 learn about and many Free/Libre Software communities being represented, which
-means that there is a contagious vibe of enthusiasm which makes me go back
-home with the will to keep doing *more*.
+means that there is a contagious vibe of enthusiasm. This makes me go back
+home with the will to do *more*.
 
 Last but not least, FOSDEM is one of these rare events in which I get to meet
 many people who are dear to me &mdash; in some cases spontaneously, even
@@ -41,7 +41,7 @@ Like on previous years, the [Web Engines
 Hackfest](https://webengineshackfest.org/2018) has been hosted by
 [Igalia](https://igalia.com), in the lovely city of A Coruña. Every year the
 number of participants has been increasing, and we hit the mark of 70 people
-in this edition.
+in the 2018 edition.
 
 
 ### Are We GTK+4 Yet?
@@ -73,7 +73,7 @@ the current WebKitGTK+ releases running on GTK+3.
 
 <figure class="image">
   ![](gtk-wk-sg.svg)
-  <figcaption>An ideal future: paint Web contnt in th GPU, feed textures to GTK+.</figcaption>
+  <figcaption>An ideal future: paint Web content in the GPU, feed textures to GTK+.</figcaption>
 </figure>
 
 While not needing to modify our existing rendering pipeline should help, and
@@ -102,17 +102,17 @@ played back. Sci-fi? No: [Media Source Extensions](https://developer.mozilla.org
 
 A few days before the hackfest it came to our attention that a [popular video
 site](https://youtube.com) stopped working with
-[WebKitGTK+](https://webkitgtk.org) and [WPE WebKit](https://wpewebkit.org) in
-some cases. The culprit: The site started requiring MSE in some cases, our MSE
-implementation was disabled by default, and when enabled it showed a number of
-bugs which made it hardly possible to watch an entire video in one go.
+[WebKitGTK+](https://webkitgtk.org) and [WPE WebKit](https://wpewebkit.org).
+The culprit: The site started requiring MSE in some cases, without supporting
+a fallback anymore, our MSE implementation was disabled by default, and when
+enabled it showed a number of bugs which made it hardly possible to watch an
+entire video in one go.
 
-During many of the days of the Web Engines Hackfest a few of us worked
-tirelessly into the wee hours to [make MSE work well
-enough](https://blogs.gnome.org/mcatanzaro/2018/11/02/webkitgtk-2-22-2-and-2-22-3-media-source-extensions-and-youtube/).
-We managed to crank out no less than two WebKitGTK+ releases (and one
-for WPE WebKit) which fixed most of the rough edges, making it possible to
-have MSE enabled and working.
+During many the Web Engines Hackfest a few of us worked tirelessly, sometimes
+into the wee hours, to [make MSE work well](https://blogs.gnome.org/mcatanzaro/2018/11/02/webkitgtk-2-22-2-and-2-22-3-media-source-extensions-and-youtube/).
+We managed to crank out no less than two WebKitGTK+ releases (and one for WPE
+WebKit) which fixed most of the rough edges, making it possible to have MSE
+enabled and working.
 
 
 ### And What Else?
@@ -120,6 +120,6 @@ have MSE enabled and working.
 To be completely honest, shipping the releases with a working <abbr
 title="Media Source Extensions">MSE</abbr> implementation made the hackfest
 pass in a blur and I cannot remember much else other than having a great time
-meeting everybody, and fascinating conversations &mdash; many of them
+meeting everybody, and having many fascinating conversations &mdash; often
 around a table sharing good food. And that is already good motivation to
 attend again next year 😉
