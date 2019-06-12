@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Knewave';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    src: local('Knewave'),
+         local('Knewave-Regular'),
+         url('fonts/knewave.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    src: url('fonts/SourceCodePro-Regular.eot'); /* IE9 */
+    src: local('Source Code Pro'),
+	     local('SourceCodePro-Regular'),
+	     url('fonts/SourceCodePro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/SourceCodePro-Regular.ttf.woff2') format('woff2'),
+         url('fonts/SourceCodePro-Regular.otf.woff') format('woff'),
+         url('fonts/SourceCodePro-Regular.ttf') format('truetype'),
+         url('fonts/SourceCodePro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: italic;
+    font-variant: normal;
+    font-weight: normal;
+    src: url('fonts/SourceCodePro-It.eot'); /* IE9 */
+    src: local('Source Code Pro Italic'),
+	     local('SourceCodePro-Italic'),
+	     url('fonts/SourceCodePro-It.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/SourceCodePro-It.ttf.woff2') format('woff2'),
+         url('fonts/SourceCodePro-It.otf.woff') format('woff'),
+         url('fonts/SourceCodePro-It.ttf') format('truetype'),
+         url('fonts/SourceCodePro-It.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+	src: url('fonts/SourceCodePro-Bold.eot'); /* IE9 */
+    src: local('Source Code Pro Bold'),
+	     local('SourceCodePro-Bold'),
+	     url('fonts/SourceCodePro-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/SourceCodePro-Bold.ttf.woff2') format('woff2'),
+         url('fonts/SourceCodePro-Bold.otf.woff') format('woff'),
+         url('fonts/SourceCodePro-Bold.ttf') format('truetype'),
+         url('fonts/SourceCodePro-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: italic;
+    font-variant: normal;
+    font-weight: bold;
+	src: url('fonts/SourceCodePro-BoldIt.eot'); /* IE9 */
+    src: local('Source Code Pro Bold Italic'),
+	     local('SourceCodePro-BoldItalic'),
+	     url('fonts/SourceCodePro-BoldIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/SourceCodePro-BoldIt.ttf.woff2') format('woff2'),
+         url('fonts/SourceCodePro-BoldIt.otf.woff') format('woff'),
+         url('fonts/SourceCodePro-BoldIt.ttf') format('truetype'),
+         url('fonts/SourceCodePro-BoldIt.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Work Sans';
+	font-weight: normal;
+    font-variant: normal;
+	font-style: normal;
+	src: local('Work Sans'),
+	     local('WorkSans-Regular'),
+		 url('fonts/WorkSans-Regular.woff2') format('woff2'),
+		 url('fonts/WorkSans-Regular.woff') format('woff'),
+		 url('fonts/WorkSans-Regular.ttf') format('truetype'),
+		 url('fonts/WorkSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Work Sans';
+	font-style: italic;
+    font-variant: normal;
+	font-weight: normal;
+	src: local('Work Sans Italic'),
+	     local('WorkSans-Italic'),
+		 url('fonts/WorkSans-Italic.woff2') format('woff2'),
+		 url('fonts/WorkSans-Italic.woff') format('woff'),
+		 url('fonts/WorkSans-Italic.ttf') format('truetype'),
+		 url('fonts/WorkSans-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Work Sans';
+	font-style: normal;
+    font-variant: normal;
+	font-weight: bold;
+	src: local('Work Sans Bold'),
+	     local('WorkSans-Bold'),
+		 url('fonts/WorkSans-Bold.woff2') format('woff2'),
+		 url('fonts/WorkSans-Bold.woff') format('woff'),
+		 url('fonts/WorkSans-Bold.ttf') format('truetype'),
+		 url('fonts/WorkSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Work Sans';
+	font-style: italic;
+    font-variant: normal;
+	font-weight: bold;
+	src: local('Work Sans Bold Italic'),
+	     local('WorkSans-BoldItalic'),
+		 url('fonts/WorkSans-BoldItalic.woff2') format('woff2'),
+		 url('fonts/WorkSans-BoldItalic.woff') format('woff'),
+		 url('fonts/WorkSans-BoldItalic.ttf') format('truetype'),
+		 url('fonts/WorkSans-BoldItalic.otf') format('opentype');
+}

@@ -1,0 +1,17 @@
+base_url = "https://perezdecastro.org"
+compile_sass = false
+generate_rss = true
+highlight_code = true
+highlight_theme = "subway-madrid"
+build_search_index = false
+default_language = "en"
+taxonomies = [
+	{name = "tags", rss = false},
+	{name = "categories", rss = true},
+]
+
+# Additional variables to be used in templates.
+title = "perezdecastro.org"
+
+[extra]
+debug_context = false
