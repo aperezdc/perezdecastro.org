@@ -163,7 +163,9 @@ figure.image a {
    border-bottom: none;
 }
 p.image img,
-figure.image img {
+figure.image img,
+p.image video,
+figure.image video {
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 8px #aaa;
      -moz-box-shadow: 0 4px 8px #aaa;
