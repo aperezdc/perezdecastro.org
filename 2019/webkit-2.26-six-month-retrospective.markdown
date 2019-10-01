@@ -4,7 +4,7 @@ author: aperez
 tags: igalia, webkit, wpe, floss
 
 
-Now that version 2.26 of both the [WPE WebKit][wpewebkit] and
+Now that version 2.26 of both [WPE WebKit][wpewebkit] and
 [WebKitGTK][webkitgtk] ports have been out for a few weeks it is an excellent
 moment to recap and take a look at what we have achieved during this
 development cycle. Let's dive in!
@@ -42,7 +42,7 @@ function call away](https://webkitgtk.org/reference/webkit2gtk/stable/WebKitWebC
 
 ### <abbr title="Process Switch On (cross-site) Navigation">PSON</abbr>
 
-Process Switch On (cross-site) Navigation is a new feature which makes it it
+Process Switch On (cross-site) Navigation is a new feature which makes it
 harder for websites to steal information from others: rendering of pages from
 different sites always takes place in different processes. In practice, each
 [security origin](https://wiki.mozilla.org/Security/Origin) uses a different
@@ -74,7 +74,7 @@ and never revert to using unencrypted HTTP.
 During the last few months [Claudio Saavedra][csaavedra] has completed the
 support for [HTTP Strict Transport Security][wiki-hsts] in
 [libsoup][libsoup]—our networking backend—and the needed support code in
-WebKit. HSTS support is always enabled.
+WebKit. As a result, HSTS support is always enabled.
 
 ### New WebSockets Implementation
 
@@ -84,20 +84,20 @@ ports to be able to support the feature, it is far from optimal: we were
 duplicating network code because [libsoup][libsoup] *also* implements them.
 
 Now that [<abbr title="HTTP Strict Transport Security">HSTS</abbr>](#hsts)
-support was added, [Claudio][csaavedra] and [Carlos][blog-carlosgc] decided
+support is in place, [Claudio][csaavedra] and [Carlos][blog-carlosgc] decided
 that it was a good moment to switch libsoup's implementation so WebSockets can
-now also benefit from it. This also made it possible to provide the
+now also benefit from it. This also made possible to provide the
 [RFC-7692](https://tools.ietf.org/html/rfc7692) `permessage-deflate` extension,
-which allows applications to request compression of message payloads.
+which enables applications to request compression of message payloads.
 
 To ensure that no regressions would be introduced, Claudio also added support
 in libsoup for running the [Autobahn 🛣 test suite](https://github.com/crossbario/autobahn-testsuite),
-which resulted in in a number of fixes.
+which resulted in a number of fixes.
 
 
 ## Releases, Releases!
 
-This March we released [WebKitGTK 2.24][webkitgtk-224] and [WPE WebKit
+Last March we released [WebKitGTK 2.24][webkitgtk-224] and [WPE WebKit
 2.24][wpewebkit-224] in sync, and the same for the current stable, 2.26. As a
 matter of fact, most releases since 2.22 have been done in lockstep
 and this has been working extremely well.
@@ -135,7 +135,7 @@ from the point of view of the WPE WebKit port.
 
 Breaking the Web is not fun, so WebKit needs extensive testing. The source
 tree includes tens of thousands of tests which are used to avoid regressions,
-and those are run on every commit using [Buildbot][]. The status can be
+and those are ran on every commit using [Buildbot][]. The status can be
 checked at [build.webkit.org](https://build.webkit.org).
 
 Additionally, there is *another* set of builders which run *before* a patch
