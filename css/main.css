@@ -573,3 +573,17 @@ table#article-list span.category {
     }
 }
 
+ol.toc {
+	padding: 1rem 3rem;
+	background: #f8f8fa;
+	border: 1px solid #aaf;
+	border-radius: 5px;
+}
+ol.toc li {
+	padding: 0;
+	text-align: left;
+}
+ol.toc ul, ol.toc ol {
+	padding: 0;
+	margin: 0.2rem 0.2rem 0.2rem 1.2rem;
+}
