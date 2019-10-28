@@ -438,9 +438,10 @@ table#article-list span.category {
    }
 }
 
-	img {
-		max-width: 93% ! important;
-	}
+img, video {
+	max-width: 93% ! important;
+	height: auto;
+}
 
 /* ==========================================================================
    Helper classes
@@ -550,12 +551,15 @@ table#article-list span.category {
     }
 
     tr,
-    img {
+    img,
+	video {
         page-break-inside: avoid;
     }
 
-    img {
+    img,
+	video {
         max-width: 100% !important;
+		height: auto;
     }
 
     @page {
