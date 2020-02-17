@@ -1,16 +1,16 @@
 #! /bin/bash
-exec rsync -hrlxzc \
-    --progress      \
-    --safe-links     \
-    --exclude=.git/   \
-    --exclude=build    \
-    --exclude=upload    \
-    --exclude=site.js    \
-    --exclude=layout/     \
-    --exclude=sidebar/     \
-    --exclude=README.md     \
-    --exclude=site.json      \
-    --exclude=twistd.pid      \
-    --exclude=twistd.log       \
-    --exclude=node_modules/     \
+exec rsync -hrlxzzc \
+    --progress       \
+    --safe-links      \
+    --exclude=.git/    \
+    --exclude=build     \
+    --exclude=upload     \
+    --exclude=site.js     \
+    --exclude=layout/      \
+    --exclude=sidebar/      \
+    --exclude=README.md      \
+    --exclude=site.json       \
+    --exclude=twistd.pid       \
+    --exclude=twistd.log        \
+    --exclude=node_modules/      \
     . crypt.connectical.com:/srv/http/perezdecastro.org/
