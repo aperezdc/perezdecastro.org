@@ -25,6 +25,7 @@
 		"chromium.%"   : "content.tag.chromium",
 		"dmon.%"       : "content.tag.dmon",
 		"igalia.%"     : "content.tag.igalia",
+		"webkit.%"     : "content.tag.webkit",
 		"webkitgtk.%"  : "content.tag.webkitgtk",
 		"connectical.%": "content.tag.connectical",
 		"snabbswitch.%": "content.tag.snabbswitch"

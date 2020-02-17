@@ -1,7 +1,7 @@
 title: Web Engines Hackfest 2018 → FOSDEM 2019
 date: 2019-01-27 23:45
 author: aperez
-tags: igalia
+tags: igalia, webkit
 
 The last quarter of 2018 has been a quite hectic one, and every time I had
 some spare time after the [Web Engines
