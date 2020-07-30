@@ -314,7 +314,8 @@ table#article-list span.category {
       display: block;
       float: left;
       background: url(avatar.png) 50% 50%;
-      background-image: -webkit-image-set(url(avatar.png) 1x, url(avatar@2x.png) 2x);
+      background-image: image-set(url(avatar.png) 1x, url(avatar@2x.png) 2x, url(avatar@3x.png) 3x);
+      background-image: -webkit-image-set(url(avatar.png) 1x, url(avatar@2x.png) 2x, url(avatar@3x.png) 3x);
       border-radius: 36px;
       border: 1px solid #66c;
       -webkit-box-shadow: 0 2px 4px #ccc;
