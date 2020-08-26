@@ -55,7 +55,7 @@ underneath and that the SPARQL parser included in Tracker is quite
 permissive and will just pass-through certain constructs when generating
 the SQL queries.
 
-As an example, the [regular expression syntax used y SPARQL][] does not
+As an example, the [regular expression syntax used by SPARQL][] does not
 include predefined character classes, but as SQLite uses [POSIX regular
 expressions][] internally, the following filter expression works:
 
@@ -112,6 +112,6 @@ interest — faster version.)*
   [Optimizing SPARQL queries for Tracker, part 1]: http://blogs.gnome.org/abustany/2011/01/15/optimizing-sparql-queries-for-tracker-part-1/
   [Optimizing SPARQL queries for Tracker, part 2]: http://blogs.gnome.org/abustany/2011/01/20/optimizing-sparql-queries-for-tracker-part-2/
   [SQLite]: http://sqlite.org/
-  [regular expression syntax used y SPARQL]: http://www.w3.org/TR/xpath-functions/#regex-syntax
+  [regular expression syntax used by SPARQL]: http://www.w3.org/TR/xpath-functions/#regex-syntax
   [POSIX regular expressions]: https://en.wikipedia.org/wiki/Regular_expression#POSIX
   [using a property function]: https://live.gnome.org/Tracker/Documentation/SparqlTipsTricks#Use_property_functions
