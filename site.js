@@ -23,6 +23,8 @@ marked.setOptions({
 		const validLanguage = H.getLanguage(lang) ? lang : "plaintext";
 		return H.highlight(validLanguage, code).value;
 	},
+	smartLists: true,
+	smartypants: true,
 });
 
 

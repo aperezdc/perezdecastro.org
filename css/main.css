@@ -154,7 +154,8 @@ nav ul li.back {
 }
 
 p.image,
-figure.image {
+figure.image,
+figure.table {
    text-align: center;
    margin: 1.5em 0;
 }
@@ -165,7 +166,8 @@ figure.image a {
 p.image img,
 figure.image img,
 p.image video,
-figure.image video {
+figure.image video,
+figure.table table {
   border-radius: 5px;
   -webkit-box-shadow: 0 4px 8px #aaa;
      -moz-box-shadow: 0 4px 8px #aaa;
