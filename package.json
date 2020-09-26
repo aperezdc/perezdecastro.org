@@ -15,9 +15,9 @@
 	"dependencies": {
 		"fishbone": "~1.0.1",
 		"glob": "^7.1.6",
-		"highlight.js": "~9.7.0",
-		"marked": "^0.3.19",
-		"mustache": "~2.2.1",
+		"highlight.js": "~10.2.0",
+		"marked": "^1.1.1",
+		"mustache": "~4.0.1",
 		"veil": "~0.1.0"
 	}
 }
