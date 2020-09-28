@@ -1,7 +1,5 @@
 # Personal Adrian's website and generator
 
-[![Build status](https://app.wercker.com/status/0ed46b714aa7d26c28a62c81493f061e/m/master "wercker status")](https://app.wercker.com/project/bykey/0ed46b714aa7d26c28a62c81493f061e)
-
 This the source code for [my personal website](https://perezdecastro.org).
 
 ## License
