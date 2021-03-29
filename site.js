@@ -20,8 +20,8 @@ var marked = require("marked");
 
 marked.setOptions({
 	highlight: function (code, lang, callback) {
-		const validLanguage = H.getLanguage(lang) ? lang : "plaintext";
-		return H.highlight(validLanguage, code).value;
+		const language = H.getLanguage(lang) ? lang : "plaintext";
+		return H.highlight(code, {language}).value;
 	},
 	smartLists: true,
 	smartypants: true,

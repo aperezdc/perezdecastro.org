@@ -13,11 +13,11 @@
 	"homepage": "http://github.com/aperezdc/perezdecastro.org",
 	"description": "Static website generator (and content) for perezdecastro.org",
 	"dependencies": {
-		"fishbone": "~1.0.1",
-		"glob": "^7.1.6",
-		"highlight.js": "~10.4.1",
-		"marked": "^2.0.1",
-		"mustache": "~4.0.1",
-		"veil": "~0.1.0"
+		"fishbone": "^1.0",
+		"glob": "^7.1",
+		"highlight.js": "^10.7",
+		"marked": "^2.0",
+		"mustache": "^4.2",
+		"veil": "^0.1"
 	}
 }

@@ -12,29 +12,29 @@ development cycle. Let's dive in!
 [we]: https://www.igalia.com/technology/browsers
 
 <ol class="toc">
-  <li>[New Features](#new-features)
+  <li><a href="#new-features">New Features</a>
     <ul>
-    <li>[Emoji Picker](#emoji-picker)</li>
-    <li>[Data Lists](#data-lists)</li>
-    <li>[WPE Renderer for WebKitGTK](#wpe-renderer-for-webkitgtk)</li>
-    <li>[In-Process DNS Cache](#in-process-dns-cache)</li>
+    <li><a href="#emoji-picker">Emoji Picker</a></li>
+    <li><a href="#data-lists">Data Lists</a></li>
+    <li><a href="#wpe-renderer-for-webkitgtk">WPE Renderer for WebKitGTK</a></li>
+    <li><a href="#in-process-dns-cache">In-Process DNS Cache</a></li>
     </ul>
   </li>
-  <li>[Security](#security)
+  <li><a href="#security">Security</a>
     <ul>
-    <li>[Subprocess Sandboxing](#subprocess-sandboxing)</li>
-    <li>[<abbr title="Process Swap On (cross-site) Navigation">PSON</abbr>](#-abbr-title-process-swap-on-cross-site-navigation-pson-abbr-)</li>
-    <li>[<abbr title="HTTP Strict Transport Security">HSTS</abbr>](#-abbr-title-http-strict-transport-security-hsts-abbr-)</li>
-   <li>[New WebSockets Implementation](#new-websockets-implementation)</li>
+    <li><a href="#subprocess-sandboxing">Subprocess Sandboxing</a></li>
+    <li><a href="#-abbr-title-process-swap-on-cross-site-navigation-pson-abbr-"><abbr title="Process Swap On (cross-site) Navigation">PSON</abbr></a></li>
+    <li><a href="#-abbr-title-http-strict-transport-security-hsts-abbr-"><abbr title="HTTP Strict Transport Security">HSTS</abbr></a></li>
+   <li><a href="#new-websockets-implementation">New WebSockets Implementation</a></li>
    </ul>
-  <li>[Cleanups](#cleanups)</li>
-  <li>[Releases, Releases!](#releases-releases-)
+  <li><a href="#cleanups">Cleanups</a></li>
+  <li><a href="#releases-releases-">Releases, Releases!</a>
     <ul>
-    <li>[Buildroot ♥ WebKit](#buildroot-webkit)</li>
+    <li><a href="#buildroot-webkit">Buildroot ♥ WebKit</a></li>
     </ul>
   </li>
-  <li>[Buildbot Maintenance](#buildbot-maintenance)</li>
-  <li>[One More Thing](#one-more-thing)</li>
+  <li><a href="#buildbot-maintenance">Buildbot Maintenance</a></li>
+  <li><a href="#one-more-thing">One More Thing</a></li>
 </ol>
 
 ## New Features
