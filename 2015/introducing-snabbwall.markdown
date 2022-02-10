@@ -8,9 +8,9 @@ If you have been following the blogs of my colleagues [Katerina](http://luatime.
 We are now starting the development of [SnabbWall](http://snabbwall.org), an *application-level* (Layer-7) firewall *suite* for Snabb Switch, and yours truly happens to be the lead developer, so I figured out this is a good moment to introduce the project, which is kindly sponsored by the [NLnet Foundation](http://nlnet.nl/).
 
 <figure style="text-align:center">
-  ![](http://snabbwall.org/images/igalia-logo.png)
+  <img src="//snabbwall.igalia.com/images/igalia-logo.png">
   <span style="margin-left:20px">&nbsp;</span>
-  ![](http://snabbwall.org/images/nlnet-logo.gif)
+  <img src="//snabbwall.igalia.com/images/nlnet-logo.gif">
 </figure>
 
 
@@ -56,7 +56,7 @@ Dear readers: meet SnabbWall
 SnabbWall is —will be, when completed— a set of SnS *applications* and *programs*. Applications are reusable in your own designs, like every other SnS application.
 
 <figure class="image">
-  ![](http://snabbwall.org/images/diagrams/arch-blocks.png)
+  <img src="//snabbwall.igalia.com/images/diagrams/arch-blocks.png">
   <figcaption>SnabbWall components</figcaption>
 </figure>
 

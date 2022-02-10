@@ -12,9 +12,9 @@ developing at [Igalia](https://www.igalia.com) with sponsorship from the
 [NLnet Foundation](https://nlnet.nl) (thanks!).
 
 <figure style="text-align:center">
-  ![](http://snabbwall.org/images/igalia-logo.png)
+  <img src="//snabbwall.igalia.com/images/igalia-logo.png">
   <span style="margin-left:20px">&nbsp;</span>
-  ![](http://snabbwall.org/images/nlnet-logo.gif)
+  <img src="//snabbwall.igalia.com/images/nlnet-logo.gif">
 </figure>
 
 SnabbWall uses the nDPI library via the [ljndpi][ljndpi] binding, about which
@@ -130,7 +130,7 @@ One More Thing...
 -----------------
 
 <figure class="image">
-  ![](https://perezdecastro.org/images/onemorething-small.jpg)
+  <img src="//perezdecastro.org/images/onemorething-small.jpg">
   <figcaption>He said it 31 times on stage (look it up!)</figcaption>
 </figure>
 

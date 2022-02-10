@@ -16,7 +16,7 @@
 		"fishbone": "^1.0",
 		"glob": "^7.1",
 		"highlight.js": "^10.7",
-		"marked": "^2.0",
+		"marked": "^4.0.12",
 		"mustache": "^4.2",
 		"veil": "^0.1"
 	}

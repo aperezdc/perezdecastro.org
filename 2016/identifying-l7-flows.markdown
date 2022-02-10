@@ -13,9 +13,9 @@ Layer-7 analyzer and firewall which [Igalia](http://www.igalia.com) is
 developing with sponsorship from the [NLnet Foundation](https://nlnet.nl).
 
 <figure style="text-align:center">
-  ![](http://snabbwall.org/images/igalia-logo.png)
+  <img src="//snabbwall.igalia.com/images/igalia-logo.png">
   <span style="margin-left:20px">&nbsp;</span>
-  ![](http://snabbwall.org/images/nlnet-logo.gif)
+  <img src="//snabbwall.igalia.com/images/nlnet-logo.gif">
 </figure>
 
 *(For those interested in following only my Snabb-related posts, there are

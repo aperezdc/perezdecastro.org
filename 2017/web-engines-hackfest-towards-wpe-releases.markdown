@@ -14,7 +14,7 @@ out the future of the projects which allow humanity to see pictures of cute
 kittens — among many other things.
 
 <figure class="image">
-  ![](//perezdecastro.org/2017/web-kitten.jpg)
+  <img alt="Random kitten image" src="//perezdecastro.org/2017/web-kitten.jpg">
   <figcaption>Mandatory fluff ([CC-BY-NC](https://www.flickr.com/photos/nwater/6781786068)).</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ single moment during the whole year that there is a sizeable peak of activity
 in European day times.
 
 <figure class="image">
-  ![](//perezdecastro.org/images/glasses-scrolling-reflection.gif)
+  <img src="//perezdecastro.org/images/glasses-scrolling-reflection.gif">
   <figcaption>Watching repository activity during the hackfest.</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ tarball starting off the [WebKitGTK+ 2.18.x stable
 branch](https://trac.webkit.org/wiki/WebKitGTK/2.18.x).
 
 <figure style="text-align:center">
-  ![](//perezdecastro.org/images/wild-webkit-port-appears.png)
+  <img src="//perezdecastro.org/images/wild-webkit-port-appears.png">
   <figcaption>Wild WEBKIT PORT appeared!</figcaption>
 </figure>
 
@@ -161,8 +161,8 @@ mismatched fonts when the user has chosen a different font for the interface
 this in the following screen capture of Epiphany:
 
 <figure class="rollover" style="text-align:center">
-  ![](//perezdecastro.org/2017/ephy-cantarell.png)
-  ![](//perezdecastro.org/2017/ephy-system-font.png)
+  <img src="//perezdecastro.org/2017/ephy-cantarell.png">
+  <img src="//perezdecastro.org/2017/ephy-system-font.png">
   <figcaption>Web using hardcoded Cantarell and (on hover) `-webkit-system-font`.</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ Inspector use the system font](https://bugs.webkit.org/show_bug.cgi?id=178388)
 as well.
 
 <figure class="image">
-  <a href="//perezdecastro.org/2017/minibrowser-inspector-cantarell.png">![](/2017/minibrowser-inspector-cantarell-small.png)</a>
+  <a href="//perezdecastro.org/2017/minibrowser-inspector-cantarell.png"><img src="//perezdecastro.org/2017/minibrowser-inspector-cantarell-small.png"></a>
   <figcaption>Web Inspector using Cantarell, the default GNOME 3 font
     ([full size](minibrowser-inspector-cantarell.png)).</figcaption>
 </figure>
@@ -254,5 +254,3 @@ analyzing situations which are hard to reproduce, or which do not happen
 when running inside a debugger. I am looking forward to have some time to
 integrate this properly into WebKitGTK+ and specially WPE, because it will
 be most useful in embedded devices.
-
-

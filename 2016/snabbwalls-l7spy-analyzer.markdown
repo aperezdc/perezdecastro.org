@@ -11,9 +11,9 @@ SnabbWall is being developed at [Igalia](https://www.igalia.com) with
 sponsorship from the [NLnet Foundation](https://nlnet.nl). (Thanks!)
 
 <figure style="text-align:center">
-  ![](http://snabbwall.org/images/igalia-logo.png)
+  <img src="//snabbwall.igalia.com/images/igalia-logo.png">
   <span style="margin-left:20px">&nbsp;</span>
-  ![](http://snabbwall.org/images/nlnet-logo.gif)
+  <img src="//snabbwall.igalia.com/images/nlnet-logo.gif">
 </figure>
 
 
@@ -24,9 +24,11 @@ There are two things related to `L7Spy` I want to mention beforehand:
 
 ### nDPI 1.8 is Now Supported
 
-The changes from the [recently released][ljndpi0.3.3] `ljndpi` v0.3.3 have been
-merged into the SnabbWall repository, which means that now it also supports
-using [version 1.8 of the nDPI library](https://github.com/ntop/nDPI/releases/tag/1.8).
+The changes from the [recently
+released](//perezdecastro.org/2016/ljndpi-0.0.3-released.html) `ljndpi` v0.3.3
+have been merged into the SnabbWall repository, which means that now it also
+supports using [version 1.8 of the nDPI
+library](https://github.com/ntop/nDPI/releases/tag/1.8).
 
 ### Following Upstream
 
@@ -62,7 +64,7 @@ which should allow for painless integration. The application has two
 bidirectional endpoints called *south* and *north*:
 
 <figure style="text-align:center">
-  ![](https://perezdecastro.org/2016/app-l7spy.png)
+  <img src="//perezdecastro.org/2016/app-l7spy.png">
   <figcaption>The L7Spy application.</figcaption>
 </figure>
 
@@ -78,7 +80,7 @@ application](https://github.com/snabbco/snabb/tree/master/src/apps/socket) to
 passive analysis of the traffic passing through that interface:
 
 <figure style="text-align:center">
-  ![](https://perezdecastro.org/2016/app-rawsocket-l7spy.png)
+  <img src="//perezdecastro.org/2016/app-rawsocket-l7spy.png">
   <figcaption>Passive analysis made easy</figcaption>
 </figure>
 
@@ -181,7 +183,7 @@ identifying [IPv6](https://en.wikipedia.org/wiki/Ipv6) traffic is already
 supported.
 
 <figure class="image">
-  ![](https://perezdecastro.org/2016/let-ipv6-flow.png)
+  <img src="//perezdecastro.org/2016/let-ipv6-flow.png">
   <figcaption>Get that IPv6 flowing!</figcaption>
 </figure>
 
@@ -201,4 +203,3 @@ following days. Happy hacking!
 
 
 [snabb]: https://github.com/snabbco/snabb
-[ljndpi0.0.3]: https://perezdecastro.org/2016/ljndpi-0.0.3-released.html

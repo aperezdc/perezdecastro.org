@@ -19,7 +19,7 @@ en Madrid. Quien se pase cerca de la Casa de Campo, por la zona de la
 Avenida de Portugal verá los enormes toldos blancos del circo:
 
 <figure class="image">
-    ![](../images/cirque-carpa1.jpg)
+    <img src="//perezdecastro.org/images/cirque-carpa1.jpg">
     <figcaption>Gran Chapiteau, desde la Avenida de Portugal</figcaption>
 </figure>
 
@@ -35,7 +35,7 @@ las funciones, antes de que se vayan a mediados de Enero a deleitar
 a los espectadores de algún otro país.
 
 <figure class="image">
-    ![](../images/cirque-camion1.jpg)
+    <img src="//perezdecastro.org/images/cirque-camion1.jpg">
     <figcaption>Camión con un cartelón de Varekai</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ al escenario para agradecer el mar de aplausos que los recompensa
 después de cada función.
 
 <figure class="image">
-    ![](../images/cirque-paraguas.jpg)
+    <img src="//perezdecastro.org/images/cirque-paraguas.jpg">
     <figcaption>Servidor, con un paraguas del Cirque du Soleil</figcaption>
 </figure>
 

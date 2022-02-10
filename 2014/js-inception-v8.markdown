@@ -76,7 +76,7 @@ than picking something new from the spec, and live-coding it, let's say the
 delivering a talk cannot *ever* go bad.
 
 <figure class="image">
-	![](/2014/danger-is-my-middle-name.gif)
+	<img src="//perezdecastro.org/2014/danger-is-my-middle-name.gif">
 	<figcaption>Live-coding, what could go wrong?</figcaption>
 </figure>
 
@@ -147,9 +147,9 @@ specification](http://people.mozilla.org/~jorendorff/es6-draft.html) can be
 a daunting task. We may feel compelled to define things differently.
 
 <figure class="image padded">
-	![](http://imgs.xkcd.com/comics/standards.png)
+	<img src="//imgs.xkcd.com/comics/standards.png">
 	<figcaption>How standards are born, courtesy of
-		[XKCD](https://xkcd.com/927/).</figcaption>
+		<a href="https://xkcd.com/927/">XKCD</a>.</figcaption>
 </figure>
 
 Personally, I would eradicate one of the modes, keep just sloppy or strict,
@@ -243,7 +243,7 @@ how functions similar to the one we want to implement are done, while
 keeping a copy of the spec around for reference.
 
 <figure class="image padded">
-	![](/2014/when-in-rome.gif)
+	<img src="//perezdecastro.org/2014/when-in-rome.gif">
 	<figcaption>Do as the tigers do.</figcaption>
 </figure>
 
@@ -290,5 +290,5 @@ improving the web platform not just for themselves, but for everybody
 else as well. Thanks!
 
 <figure class="image">
-	![](/2014/igalia-bloomberg.png)
+	<img src="//perezdecastro.org/2014/igalia-bloomberg.png">
 </figure>

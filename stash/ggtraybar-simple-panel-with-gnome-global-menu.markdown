@@ -25,7 +25,7 @@ it is not even configurable at this point, it will always position
 itself in the top edge of the screen and use a hardcoded layout which is
 comfortable for *me*. I know people likes screenshots, so here we go:
 
-[![][]][]There are a couple additional features throwed in. First one:
+There are a couple additional features throwed in. First one:
 by tapping “Alt-F2” a built-in command line will replace the part of the
 panel used by the global menu to launch commands from there.
 Intentionally, the hotkey is the same as for the GNOME panel run dialog

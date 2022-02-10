@@ -72,7 +72,7 @@ room for improvements, but at least we expect performance to be on par with
 the current WebKitGTK+ releases running on GTK+3.
 
 <figure class="image">
-  ![](gtk-wk-sg.svg)
+  <img src="//perezdecastro.org/2019/gtk-wk-sg.svg">
   <figcaption>An ideal future: paint Web content in the GPU, feed textures to GTK+.</figcaption>
 </figure>
 

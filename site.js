@@ -16,7 +16,7 @@ var G = require("glob");
 var M = require("mustache");
 var C = require("fishbone");
 var H = require("highlight.js");
-var marked = require("marked");
+const { marked } = require("marked");
 
 marked.setOptions({
 	highlight: function (code, lang, callback) {

@@ -262,7 +262,7 @@ matter of fact, most releases since 2.22 have been done in lockstep and this
 has been working extremely well.
 
 <figure class="image">
-  ![](/images/a-team-plan.png)
+  <img src="//perezdecastro.org/images/a-team-plan.png">
   <figcaption>Hannibal Smith, happy about the simultaneous releases.</figcaption>
 </figure>
 
