@@ -74,7 +74,7 @@ without needing stuff in the file system. Passing options to `dmon` will
 trigger some of the extra features provided:
 
 - Passing `-n` makes it run in the foreground. This is very useful in
-  conjunction with `-1`: with tha latter the processes will be only
+  conjunction with `-1`: with the latter the processes will be only
   respawned if their exit status is non-zero.
 - If you want to log messages from standard error, use `-e` and both
   standard output and standard error will be piped to the logging
