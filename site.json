@@ -6,8 +6,7 @@
 	"baseurl": "https://perezdecastro.org",
 
 	"navigation": [
-		{ "text": "Mastodon", "link": "https://mastodon.social/@aperezdc", "rel": "me" },
-		{ "text": "Twitter",  "link": "http://twitter.com/aperezdc", "rel": "me" },
+		{ "text": "Mastodon", "link": "https://oldbytes.space/@aperezdc", "rel": "me" },
 		{ "text": "GitHub",   "link": "https://github.com/aperezdc", "rel": "me" },
 		{ "text": "Photos",   "link": "http://www.flickr.com/photos/aperezdc/" },
 		{ "text": "Contact",  "link": "/contact.html" }
