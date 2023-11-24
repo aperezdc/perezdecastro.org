@@ -13,4 +13,4 @@ exec rsync -hrlxzzc \
     --exclude=twistd.pid       \
     --exclude=twistd.log        \
     --exclude=node_modules/      \
-    . crypt.connectical.com:/srv/http/perezdecastro.org/
+    . crypt.connectical.com:/srv/http/perezdecastro.org/htdocs/
