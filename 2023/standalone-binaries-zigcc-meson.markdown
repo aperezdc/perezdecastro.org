@@ -15,7 +15,7 @@ that may not get as much rep as others like Rust, but the authors have
 had one of the greatest ideas ever: reuse the chops that Clang has as
 a cross-compiler, throw in a copy of the sources for the [Musl C
 library][musl], and provide an _extremely_ convenient compiler driver
-which will built the parts of the C library needed by your program
+that builds the parts of the C library needed by your program
 on-demand.
 
 Try the following, it just works, it's _magic_:
