@@ -12,10 +12,6 @@ dedicase a las carreras de coches o a leer libros sagrados boca abajo o
 a *sabediós* qué otras bohemias actividades propias de famosillos
 descerebrados me dá más bien igual. Porque era un buen actor.
 
-<figure class="image">
-    ![Paul Newman](http://cache.daylife.com/imageserve/05hh8kAfci5g8/340x.jpg)
-</figure>
-
 Entre los *flims* inolvidables de este hombrecillo nos encontramos con
 peliculones como [La gata sobre el tejado de
 zinc](http://es.wikipedia.org/wiki/La_gata_sobre_el_tejado_de_zinc),

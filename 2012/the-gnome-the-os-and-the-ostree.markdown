@@ -24,11 +24,12 @@ precisely what [OSTree][] is about.
 ## OSTree
 
 <figure class="image">
-  ![Trees: a new home for (the) GNOME](http://farm5.staticflickr.com/4007/4653657177_22d946ef40.jpg)
+  <img alt="Trees: a new home for (the) GNOME"
+    src="http://farm5.staticflickr.com/4007/4653657177_22d946ef40.jpg">
 
   <figcaption>
-  Trees: a new home for (the) GNOME (Creative-Commons [image by Alan
-  Moote](http://www.flickr.com/photos/parabyte/4653657177/))
+  Trees: a new home for (the) GNOME (Creative-Commons <a
+    href="http://www.flickr.com/photos/parabyte/4653657177/">image by Alan Moote</a>.)
   </figcaption>
 </figure>
 

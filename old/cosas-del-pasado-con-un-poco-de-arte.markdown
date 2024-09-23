@@ -30,8 +30,14 @@ menos que dos de los carteles que en su momento diseñé en mi época de
 máxima actividad en GPUL:
 
 <figure class="image">
-    [![Cartel de las I Charlas de Criptografía](http://th02.deviantart.net/fs71/150/i/2010/220/d/3/GPUL___1st_Cryptography_Talks_by_flyingburrito.png)](http://flyingburrito.deviantart.com/art/GPUL-1st-Cryptography-Talks-174511016)
-    [![Cartel del V Aniversatio de GPUL](http://th05.deviantart.net/fs70/150/i/2010/220/0/1/GPUL___5th_Anniversary_Poster_by_flyingburrito.png)](http://flyingburrito.deviantart.com/art/GPUL-5th-Anniversary-Poster-174509753)
+    <a href="../files/poster-gpul-crypto.pdf"><img
+      alt="Cartel de las I Charlas de Criptografía"
+      src="../images/poster-gpul-crypto@1x.png" width="300" height="424"
+      srcset="../images/poster-gpul-crypto@2x.png 2x"></a>
+    <a href="../files/poster-gpul-5th.pdf"><img
+      alt="Cartel del V Aniversatio de GPUL" width="300" height="424"
+      src="../images/poster-gpul-5th@1x.png"
+      srcset="../images/poster-gpul-5th@2x.png 2x"></a>
 </figure>
 
 Como «bonus», me he topado también  con el que —hipotéticamente— iba a
@@ -39,7 +45,10 @@ ser el fondo de pantalla de [GNOME](http://gnome.org) en la versión de
 GPUL LiveCD que nunca llegó a ver la luz del día:
 
 <figure class="image">
-    [![Fondo de escritorio para GPUL LiveCD](http://th08.deviantart.net/fs70/150/i/2010/220/4/6/GPUL___Unreleased_LiveCD_wall_by_flyingburrito.png)](http://flyingburrito.deviantart.com/art/GPUL-Unreleased-LiveCD-wall-174512197)
+    <a href="../images/unreleased-gpul-livecd-bg.png"><img
+      alt="Fondo de escritorio para GPUL LiveCD" width="300" height="240"
+      src="../images/unreleased-gpul-livecd-bg-thumb@1x.png"
+      srcset="../images/unreleased-gpul-livecd-bg-thumb@2x.png 2x"></a>
 </figure>
 
 Ya véis que uno nunca sabe lo que se encontrará en el futuro al hacer

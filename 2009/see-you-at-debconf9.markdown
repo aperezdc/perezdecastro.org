@@ -3,9 +3,11 @@ Date: 2009-07-24 18:01
 Author: aperez
 Tags: conferences, igalia, connectical
 
-<p class="image">
-  [![DebConf9 Logo](dc9logo.png)](http://debconf9.debconf.org/)
-</p>
+<figure class="image">
+  <a href="http://debconf9.debconf.org/"><img
+    style="padding: 1em"
+    alt="DebConf9 Logo" src="dc9logo.png"></a>
+</figure>
 
 I will pick up my car and embark myself into a
 8-hour trip to reach Cáceres tomorrow in the evening, after 699 km of
@@ -16,9 +18,10 @@ my best to be at the [Cheese & wine party][] and bringing some “tetilla”
 (small breast) cheese from Galicia, which has a funny shape as you can
 imagine:
 
-<p class="image">
-  [![Tetilla cheese](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Queso_tetilla_entre_otros.jpg/290px-Queso_tetilla_entre_otros.jpg)](http://en.wikipedia.org/wiki/Tetilla_cheese)
-</p>
+<figure class="image">
+  <a href="http://en.wikipedia.org/wiki/Tetilla_cheese"><img alt="Tetilla cheese"
+    src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Queso_tetilla_entre_otros.jpg/290px-Queso_tetilla_entre_otros.jpg"></a>
+</figure>
 
 I am looking forward to be there tomorrow, as this will be my first time
 at a big community event and it really looks like [this][] [kind][]

@@ -8,9 +8,10 @@ Tags: compiler, debian, go, pkg
 So the other day I wanted to play some Go, but not the kind of Go you
 could imagine by looking at today's post picture:
 
-<p class="image">
-  [![playing go](../images/playing-go.jpg)](http://en.wikipedia.org/wiki/Go%5f%28game%29)
-</p>
+<figure class="image">
+  <a href="http://en.wikipedia.org/wiki/Go%5f%28game%29"><img
+    alt="playing go" src="../images/playing-go.jpg"></a>
+</figure>
 
 I mean the Google's [Go programming language][]. The sad news  is that
 there are no Debian packages in the repositories, but I was able of

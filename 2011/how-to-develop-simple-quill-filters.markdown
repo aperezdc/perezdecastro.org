@@ -16,7 +16,9 @@ Take a close look at the middle screenshot in the image below. Can you
 spot the “Desaturate” tool?
 
 <figure class="image">
-  [![Desaturate plugin in action](http://farm7.static.flickr.com/6170/6150764021_743b2401fc.jpg)](http://www.flickr.com/photos/aperezdc/6150764021/in/photostream)
+  <a href="http://www.flickr.com/photos/aperezdc/6150764021/in/photostream"><img
+    alt="Desaturate plugin in action"
+    src="http://farm7.static.flickr.com/6170/6150764021_743b2401fc.jpg"></a>
 </figure>
 
 That tool is added to the Gallery application by the plugin I have

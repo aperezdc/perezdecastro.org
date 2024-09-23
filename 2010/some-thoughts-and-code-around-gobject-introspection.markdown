@@ -23,7 +23,7 @@ that all **GI-capable libraries are available without having to build
 any code**. To make it clear, let me put it this way:
 
 <figure class="image">
-  ![Holy introspection, Batman!](../images/holy-introspection-batman.png)
+  <img alt="Holy introspection, Batman" src="../images/holy-introspection-batman.png">
   <figcaption>Holy introspection, Batman!</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ of eight hours to write \~1300 lines of code which allow for using some
 GI-aware libraries. The mandatory screenshot:
 
 <figure class="image">
-  ![LuiGI Screenshot](../images/luigi-screenshot.png)
+  <img alt="LuiGI Screenshot" src="../images/luigi-screenshot.png">
   <figcaption>LuiGI Screenshot</figcaption>
 </figure>
 
