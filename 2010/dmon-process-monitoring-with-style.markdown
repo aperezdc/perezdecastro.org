@@ -31,12 +31,12 @@ Some weeks ago I coded [vfand][], a small “non-daemon” to control the
 speed of the fan in my Vaio laptop because it was overheating. I am
 lazy, so I deliberately left out daemonization and suggested launching
 it from [init(8)][] — because I knew that DJB's tools leave
-daemonization and logging to other tools which [just do one thing
+daemonization and logging to other tools, which [just do one thing
 well][].
 
 Days back I had to make a huge data copy in a mission-critical mail
 server, and used the mighty [rsync][] tool because I wanted the copy to
-be interruptible so I could stop it when the system load was getting
+be interruptible, so I could stop it when the system load was getting
 high and then resuming the data copy. I did that manually (`Ctrl-Z`,
 wait, `fg`, repeat), and I do not like performing automatable tasks.
 Fortunately I seldom do this kind of tasks.
@@ -47,7 +47,7 @@ had.
 
 ## How does it work? — Modus operandi
 
-In short it works àla `daemontools` without control sockets and without
+In short, it works àla `daemontools` without control sockets and without
 using script files for launching processes. All options are specified in
 the command line, as long as the commands to be run. Like this:
 
@@ -70,8 +70,8 @@ This is what DMon wil do:
 
 That is pretty close to what the `supervise` program included in
 `daemontools` does, so it have already all the advantages of it, plus
-without needing stuff in the file system. Passing options to `dmon` will
-trigger some of the extra features provided:
+without needing stuff in the file system. Passing options to `dmon`
+allows using additional features:
 
 - Passing `-n` makes it run in the foreground. This is very useful in
   conjunction with `-1`: with the latter the processes will be only
@@ -79,7 +79,7 @@ trigger some of the extra features provided:
 - If you want to log messages from standard error, use `-e` and both
   standard output and standard error will be piped to the logging
   command.
-- For faulty programs which could get somewhat “locked” and sometimes
+- For faulty programs, which could get somewhat “locked” and sometimes
   take too much time to run, you may pass a maximum running time with
   `-t`. When the timeout is reached the program will be forcibly
   killed and then started again.
@@ -93,8 +93,9 @@ trigger some of the extra features provided:
 The DMon package already includes a couple tools ready to be used as
 logging command: `dlog` will append lines to a log file, optionally
 adding a timestamp to them, and `dsyslog` will send lines to [the system
-log][]. You can use any logging tool which works with `daemontools`,
-like `multilog` (part of it) or my own [rotlog][] ;-)
+log][]. You can use any logging tool that works with `daemontools`,
+like `multilog` (part of it), or ~~my own `rotlog`~~ the included
+`drlog` tool ;-)
 
 ## DMon use-cases & Examples
 
@@ -105,7 +106,7 @@ the system load is above `4.0`, retrying until the copy succeeds:
 dmon -n -1 -L 4.0 rsync -az /path/to/srcdir /path/to/destdir
 ```
 
-Launching [vfand][1] as a daemon, logging errors to the local `syslog`,
+Launching [vfand][] as a daemon, logging errors to the local `syslog`,
 and saving the PID of the process (the second line terminates `dmon`,
 `vfand` and `dsyslog` in a single shot):
 
@@ -115,12 +116,13 @@ kill $(cat /var/run/vfand.pid)
 ```
 
 Starting the [MediaTomb][] UPnP server as a user `mediatomb` (i.e. at
-bootup), saving auto-rotated logs with [rotlog][] running as user `log`:
+bootup), saving auto-rotated logs with ~~rotlog~~ `drlog` running as
+user `log`:
 
 ```bash
 dmon -e -u mediatomb -g mediatomb -U log -G log 
      mediatomb --interface eth0 --home /mnt/mediafiles 
-     -- rotlog -c /var/log/mediatomb/
+     -- drlog -c /var/log/mediatomb/
 ```
 
 ## Final Words
@@ -130,11 +132,11 @@ to love, and using it from time to time is nice to not lose contact with
 it. Also, I had a clear idea of what I wanted to do for solving a
 particular problem, which is great for keeping focus.
 
-Albeit DMon is already in its third release (namely [version 0.3][]) and
+Albeit DMon is already in its third release (namely [version 0.3][]), and
 I have been using it since its first inceptions, it may contain bugs as
 any other piece of software. Do not hesitate to [drop me a line][] with
 your complaints and suggestions — or even better: get yourself a clone
-of the [Git][] [repository][] and use its [send-email][] awesomeness!
+of the [Git][] [repository][dmon] and use its [send-email][] awesomeness!
 
 Happy monitoring!
 
@@ -142,24 +144,21 @@ Happy monitoring!
   [runit]: http://smarden.org/runit/
   [freedt]: http://offog.org/code/freedt.html
   [Supervisor]: http://supervisord.org/
-  [upstart]: http://upstart.ubuntu.com/
-  [systemd]: http://www.freedesktop.org/wiki/Software/systemd
-  [DMon]: http://gitorious.org/dmon
+  [upstart]: https://code.launchpad.net/upstart
+  [systemd]: https://systemd.io
+  [DMon]: https://git.sr.ht/~aperezdc/dmon
   [Daniel J. Bernstein]: http://en.wikipedia.org/wiki/Daniel_J._Bernstein
   [qmail]: http://cr.yp.to/qmail.html
   [djbdns]: http://cr.yp.to/djbdns.html
   [ucspi]: http://cr.yp.to/ucspi-tcp.html
-  [vfand]: http://blogs.igalia.com/aperez/2010/07/vfand-a-daemon-to-control-fan-speed-in-vaio-laptops/
+  [vfand]: vfand-a-daemon-to-control-fan-speed-in-vaio-laptops.html
   [init(8)]: http://linux.die.net/man/8/init
   [just do one thing well]: http://onethingwell.org/post/457050307/about-one-thing-well
   [rsync]: http://www.samba.org/rsync/
   [pipe(2)]: http://linux.die.net/man/2/pipe
   [the system log]: http://linux.die.net/man/3/syslog
-  [rotlog]: http://gitorious.org/rotlog
-  [1]: http://gitorious.org/vfand
-  [MediaTomb]: http://mediatomb.cc/
-  [version 0.3]: http://gitorious.org/dmon/dmon/commit/d342f15dcd7262b420dba3be5ac96dadbab48952
+  [MediaTomb]: https://sourceforge.net/projects/mediatomb/
+  [version 0.3]: https://git.sr.ht/~aperezdc/dmon/commit/d342f15dcd7262b420dba3be5ac96dadbab48952
   [drop me a line]: mailto:aperez@igalia.com
   [Git]: http://git-scm.com
-  [repository]: http://gitorious.org/dmon/dmon/
   [send-email]: http://www.kernel.org/pub/software/scm/git/docs/git-send-email.html
