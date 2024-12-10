@@ -37,7 +37,7 @@ can do something else. The fan entry is managed by the [sonypi][]
 driver, which actually does support opening `/dev/sonypi` and getting
 the temperature using an `ioctl` called `SONYPI_IOCGTEMP`. It looked
 fine, so I implemented my little daemon in terms of `ioctl` on that
-device, so it should would with all Vaio laptops supported by the
+device, so it should work with all Vaio laptops supported by the
 driver.
 
 The speed control algorithm is quite simple at the moment, but it works
@@ -53,7 +53,7 @@ fine for me:
 
 The daemon is naïve, so it will log errors to the standard error stream,
 and it will not detach itself from the controlling terminal. An option
-is running it from `/etc/rc.local` until I add an init script which uses
+is running it from `/etc/rc.local` until I add an init script that uses
 `start-stop-daemon` (or something else) to launch it.
 
 Another option, which is a bit bizarre but will ensure that it is always
@@ -71,6 +71,6 @@ I hope this is useful for some other Vaio users out there.
 
   [Vaio TZ11MN/N]: http://www.small-laptops.com/sony-vaio-tz11/
   [fancontrol]: http://linux.die.net/man/8/fancontrol
-  [vfand]: http://gitorious.org/vfand/
+  [vfand]: https://github.com/aperezdc/vfand
   [sonypi]: http://lxr.linux.no/linux+v2.6.34.1/drivers/char/sonypi.c
   [our APT repository]: http://apt.igalia.com
